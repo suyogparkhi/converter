@@ -1,0 +1,1803 @@
+[
+  {
+    "fileName": "extension.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/extension.ts",
+    "exports": {
+      "components": [],
+      "functions": [
+        {
+          "name": "activate",
+          "isExported": true,
+          "params": [
+            {
+              "name": "context",
+              "type": "import(\"vscode\").ExtensionContext",
+              "isRequired": true
+            }
+          ],
+          "returnType": "void",
+          "usedInFiles": []
+        },
+        {
+          "name": "deactivate",
+          "isExported": true,
+          "params": [],
+          "returnType": "void",
+          "usedInFiles": []
+        }
+      ],
+      "interfaces": [],
+      "types": [],
+      "classes": [],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "vscode",
+        "path": "vscode",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "path",
+        "path": "path",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "fs",
+        "path": "fs",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "selectRootFolder",
+        "path": "./projectTypes/selectFolder",
+        "namedImports": [
+          "selectRootFolder"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\projectTypes\\selectFolder"
+      },
+      {
+        "name": "runJavaParser",
+        "path": "./parser/javaParser",
+        "namedImports": [
+          "runJavaParser"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\parser\\javaParser"
+      },
+      {
+        "name": "registerWebViewProvider",
+        "path": "./views/sidebar/register-sidebar",
+        "namedImports": [
+          "registerWebViewProvider"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\sidebar\\register-sidebar"
+      },
+      {
+        "name": "JavaPackageTreeProvider",
+        "path": "./views/tree/javaPackageTreeProvider",
+        "namedImports": [
+          "JavaPackageTreeProvider"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\javaPackageTreeProvider"
+      },
+      {
+        "name": "ClassStructureProvider",
+        "path": "./views/tree/classStructure",
+        "namedImports": [
+          "ClassStructureProvider"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\classStructure"
+      },
+      {
+        "name": "PackageTreeProvider",
+        "path": "./views/tree/packageTree",
+        "namedImports": [
+          "PackageTreeProvider"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\packageTree"
+      },
+      {
+        "name": "Element",
+        "path": "./views/tree/tokens/root",
+        "namedImports": [
+          "Element",
+          "Field",
+          "Method"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
+      },
+      {
+        "name": "showGraph",
+        "path": "./graphGeneration.ts/showGraph",
+        "namedImports": [],
+        "defaultImport": "showGraph",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\graphGeneration.ts\\showGraph"
+      },
+      {
+        "name": "ElementItem",
+        "path": "./views/tree/item",
+        "namedImports": [
+          "ElementItem"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\item"
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [
+      "D:\\Dependency-Analysis-Extension\\src\\projectTypes\\selectFolder",
+      "D:\\Dependency-Analysis-Extension\\src\\parser\\javaParser",
+      "D:\\Dependency-Analysis-Extension\\src\\views\\sidebar\\register-sidebar",
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\javaPackageTreeProvider",
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\classStructure",
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\packageTree",
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root",
+      "D:\\Dependency-Analysis-Extension\\src\\graphGeneration.ts\\showGraph",
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\item"
+    ],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "listClasses.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/graphGeneration.ts/listClasses.ts",
+    "exports": {
+      "components": [],
+      "functions": [
+        {
+          "name": "findElementsWithClassName",
+          "isExported": true,
+          "params": [
+            {
+              "name": "element",
+              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element",
+              "isRequired": true
+            }
+          ],
+          "returnType": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element[]",
+          "usedInFiles": []
+        }
+      ],
+      "interfaces": [],
+      "types": [],
+      "classes": [],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "fs",
+        "path": "fs",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "path",
+        "path": "path",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "Element",
+        "path": "../views/tree/tokens/root",
+        "namedImports": [
+          "Element"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
+    ],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "mermaid.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/graphGeneration.ts/mermaid.ts",
+    "exports": {
+      "components": [],
+      "functions": [
+        {
+          "name": "generateClassDiagram",
+          "isExported": true,
+          "params": [
+            {
+              "name": "initialClass",
+              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element",
+              "isRequired": true
+            },
+            {
+              "name": "itemsList",
+              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element[]",
+              "isRequired": true
+            }
+          ],
+          "returnType": "string",
+          "usedInFiles": []
+        },
+        {
+          "name": "generateClassDefinition",
+          "isExported": false,
+          "params": [
+            {
+              "name": "classData",
+              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element",
+              "isRequired": true
+            }
+          ],
+          "returnType": "string",
+          "usedInFiles": []
+        },
+        {
+          "name": "generateRelationships",
+          "isExported": false,
+          "params": [
+            {
+              "name": "classData",
+              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element",
+              "isRequired": true
+            },
+            {
+              "name": "itemsList",
+              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element[]",
+              "isRequired": true
+            },
+            {
+              "name": "processedRelations",
+              "type": "Set<string>",
+              "isRequired": true
+            }
+          ],
+          "returnType": "string",
+          "usedInFiles": []
+        },
+        {
+          "name": "cleanClassName",
+          "isExported": false,
+          "params": [
+            {
+              "name": "fullName",
+              "type": "string",
+              "isRequired": true
+            }
+          ],
+          "returnType": "string",
+          "usedInFiles": []
+        },
+        {
+          "name": "cleanTypeName",
+          "isExported": false,
+          "params": [
+            {
+              "name": "type",
+              "type": "string",
+              "isRequired": true
+            }
+          ],
+          "returnType": "string",
+          "usedInFiles": []
+        },
+        {
+          "name": "formatParameters",
+          "isExported": false,
+          "params": [
+            {
+              "name": "params",
+              "type": "string[]",
+              "isRequired": true
+            }
+          ],
+          "returnType": "string",
+          "usedInFiles": []
+        },
+        {
+          "name": "formatAccessModifier",
+          "isExported": false,
+          "params": [
+            {
+              "name": "modifier",
+              "type": "string",
+              "isRequired": true
+            }
+          ],
+          "returnType": "string",
+          "usedInFiles": []
+        }
+      ],
+      "interfaces": [],
+      "types": [],
+      "classes": [],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "Element",
+        "path": "../views/tree/tokens/root",
+        "namedImports": [
+          "Element"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
+    ],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "showGraph.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/graphGeneration.ts/showGraph.ts",
+    "exports": {
+      "components": [],
+      "functions": [
+        {
+          "name": "showGraph",
+          "isExported": true,
+          "params": [
+            {
+              "name": "context",
+              "type": "import(\"vscode\").ExtensionContext",
+              "isRequired": true
+            },
+            {
+              "name": "item",
+              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element",
+              "isRequired": true
+            }
+          ],
+          "returnType": "Promise<void>",
+          "usedInFiles": []
+        }
+      ],
+      "interfaces": [],
+      "types": [],
+      "classes": [],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "vscode",
+        "path": "vscode",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "fs",
+        "path": "fs",
+        "namedImports": [],
+        "defaultImport": "fs",
+        "isTypeOnly": false
+      },
+      {
+        "name": "path",
+        "path": "path",
+        "namedImports": [],
+        "defaultImport": "path",
+        "isTypeOnly": false
+      },
+      {
+        "name": "Element",
+        "path": "../views/tree/tokens/root",
+        "namedImports": [
+          "Element"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
+      },
+      {
+        "name": "findElementsWithClassName",
+        "path": "./listClasses",
+        "namedImports": [],
+        "defaultImport": "findElementsWithClassName",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\graphGeneration.ts\\listClasses"
+      },
+      {
+        "name": "generateClassDiagram",
+        "path": "./mermaid",
+        "namedImports": [],
+        "defaultImport": "generateClassDiagram",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\graphGeneration.ts\\mermaid"
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root",
+      "D:\\Dependency-Analysis-Extension\\src\\graphGeneration.ts\\listClasses",
+      "D:\\Dependency-Analysis-Extension\\src\\graphGeneration.ts\\mermaid"
+    ],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "javaParser.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/parser/javaParser.ts",
+    "exports": {
+      "components": [],
+      "functions": [
+        {
+          "name": "runJavaParser",
+          "isExported": true,
+          "params": [
+            {
+              "name": "workspaceFolder",
+              "type": "string",
+              "isRequired": true
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "isRequired": true
+            }
+          ],
+          "returnType": "Promise<void>",
+          "usedInFiles": []
+        }
+      ],
+      "interfaces": [],
+      "types": [],
+      "classes": [],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "vscode",
+        "path": "vscode",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "child_process",
+        "path": "child_process",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "path",
+        "path": "path",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "fs",
+        "path": "fs",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "projectDetector.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/projectTypes/projectDetector.ts",
+    "exports": {
+      "components": [],
+      "functions": [
+        {
+          "name": "projectDetector",
+          "isExported": true,
+          "params": [
+            {
+              "name": "rootFolder",
+              "type": "string",
+              "isRequired": true
+            },
+            {
+              "name": "projectConfig",
+              "type": "ProjectConfig",
+              "isRequired": true
+            }
+          ],
+          "returnType": "void",
+          "usedInFiles": []
+        }
+      ],
+      "interfaces": [
+        {
+          "name": "ProjectTypeConfig",
+          "isExported": false,
+          "properties": [
+            {
+              "name": "requiredFiles",
+              "type": "string[]",
+              "isRequired": true
+            },
+            {
+              "name": "matchAny",
+              "type": "boolean",
+              "isRequired": false
+            }
+          ],
+          "usedInFiles": []
+        },
+        {
+          "name": "ProjectConfig",
+          "isExported": false,
+          "properties": [],
+          "usedInFiles": []
+        }
+      ],
+      "types": [],
+      "classes": [],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "fs",
+        "path": "fs",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "path",
+        "path": "path",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "vscode",
+        "path": "vscode",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "selectFolder.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/projectTypes/selectFolder.ts",
+    "exports": {
+      "components": [],
+      "functions": [
+        {
+          "name": "selectRootFolder",
+          "isExported": true,
+          "params": [],
+          "returnType": "Promise<void>",
+          "usedInFiles": []
+        }
+      ],
+      "interfaces": [],
+      "types": [],
+      "classes": [],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "vscode",
+        "path": "vscode",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "fs",
+        "path": "fs",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "path",
+        "path": "path",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "projectDetector",
+        "path": "./projectDetector",
+        "namedImports": [
+          "projectDetector"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\projectTypes\\projectDetector"
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [
+      "D:\\Dependency-Analysis-Extension\\src\\projectTypes\\projectDetector"
+    ],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "extension.test.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/test/extension.test.ts",
+    "exports": {
+      "components": [],
+      "functions": [],
+      "interfaces": [],
+      "types": [],
+      "classes": [],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "assert",
+        "path": "assert",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "vscode",
+        "path": "vscode",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "register-sidebar.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/views/sidebar/register-sidebar.ts",
+    "exports": {
+      "components": [],
+      "functions": [
+        {
+          "name": "registerWebViewProvider",
+          "isExported": true,
+          "params": [
+            {
+              "name": "context",
+              "type": "import(\"vscode\").ExtensionContext",
+              "isRequired": true
+            },
+            {
+              "name": "op",
+              "type": "import(\"vscode\").OutputChannel",
+              "isRequired": true
+            }
+          ],
+          "returnType": "import(\"D:/Dependency-Analysis-Extension/src/views/sidebar/register-sidebar\").SidebarWebViewProvider",
+          "usedInFiles": []
+        }
+      ],
+      "interfaces": [],
+      "types": [],
+      "classes": [
+        {
+          "name": "SidebarWebViewProvider",
+          "isExported": true,
+          "methods": [
+            {
+              "name": "resolveWebviewView",
+              "params": [
+                {
+                  "name": "webviewView",
+                  "type": "import(\"vscode\").WebviewView",
+                  "isRequired": true
+                },
+                {
+                  "name": "webViewContext",
+                  "type": "import(\"vscode\").WebviewViewResolveContext<unknown>",
+                  "isRequired": true
+                },
+                {
+                  "name": "token",
+                  "type": "import(\"vscode\").CancellationToken",
+                  "isRequired": true
+                }
+              ],
+              "returnType": "void"
+            },
+            {
+              "name": "_getHtmlForWebview",
+              "params": [
+                {
+                  "name": "webview",
+                  "type": "import(\"vscode\").Webview",
+                  "isRequired": true
+                }
+              ],
+              "returnType": "string"
+            }
+          ],
+          "properties": [
+            {
+              "name": "view",
+              "type": "import(\"vscode\").WebviewView",
+              "isRequired": false
+            }
+          ],
+          "usedInFiles": []
+        }
+      ],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "CancellationToken",
+        "path": "vscode",
+        "namedImports": [
+          "CancellationToken",
+          "commands",
+          "ExtensionContext",
+          "OutputChannel",
+          "Uri",
+          "Webview",
+          "WebviewView",
+          "WebviewViewProvider",
+          "WebviewViewResolveContext",
+          "window"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "path",
+        "path": "path",
+        "namedImports": [],
+        "defaultImport": "path",
+        "isTypeOnly": false
+      },
+      {
+        "name": "fs",
+        "path": "fs",
+        "namedImports": [],
+        "defaultImport": "fs",
+        "isTypeOnly": false
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "classStructure.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/classStructure.ts",
+    "exports": {
+      "components": [],
+      "functions": [],
+      "interfaces": [],
+      "types": [],
+      "classes": [
+        {
+          "name": "ClassStructureProvider",
+          "isExported": true,
+          "methods": [
+            {
+              "name": "refresh",
+              "params": [
+                {
+                  "name": "element",
+                  "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element",
+                  "isRequired": true
+                }
+              ],
+              "returnType": "void"
+            },
+            {
+              "name": "getTreeItem",
+              "params": [
+                {
+                  "name": "element",
+                  "type": "StructureTreeItem<import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Field | import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Method>",
+                  "isRequired": true
+                }
+              ],
+              "returnType": "import(\"vscode\").TreeItem | Thenable<import(\"vscode\").TreeItem>"
+            },
+            {
+              "name": "getChildren",
+              "params": [
+                {
+                  "name": "element",
+                  "type": "StructureTreeItem<import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Field | import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Method>",
+                  "isRequired": false
+                }
+              ],
+              "returnType": "import(\"vscode\").ProviderResult<StructureTreeItem<import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Field | import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Method>[]>"
+            }
+          ],
+          "properties": [
+            {
+              "name": "_onDidChangeTreeData",
+              "type": "import(\"vscode\").EventEmitter<void | StructureTreeItem<import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Field | import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Method>>",
+              "isRequired": true
+            },
+            {
+              "name": "currentElement",
+              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element",
+              "isRequired": true
+            },
+            {
+              "name": "onDidChangeTreeData",
+              "type": "import(\"vscode\").Event<void | StructureTreeItem<import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Field | import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Method> | StructureTreeItem<import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Field | import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Method>[]>",
+              "isRequired": false
+            }
+          ],
+          "usedInFiles": []
+        },
+        {
+          "name": "StructureTreeItem",
+          "isExported": false,
+          "methods": [
+            {
+              "name": "getLabel",
+              "params": [
+                {
+                  "name": "className",
+                  "type": "string",
+                  "isRequired": true
+                },
+                {
+                  "name": "item",
+                  "type": "T",
+                  "isRequired": true
+                },
+                {
+                  "name": "type",
+                  "type": "\"field\" | \"method\"",
+                  "isRequired": true
+                }
+              ],
+              "returnType": "string"
+            },
+            {
+              "name": "getTooltip",
+              "params": [
+                {
+                  "name": "item",
+                  "type": "T",
+                  "isRequired": true
+                },
+                {
+                  "name": "type",
+                  "type": "\"field\" | \"method\"",
+                  "isRequired": true
+                }
+              ],
+              "returnType": "string"
+            },
+            {
+              "name": "getIconPath",
+              "params": [
+                {
+                  "name": "item",
+                  "type": "T",
+                  "isRequired": true
+                },
+                {
+                  "name": "type",
+                  "type": "\"field\" | \"method\"",
+                  "isRequired": true
+                }
+              ],
+              "returnType": "{ light: string; dark: string; }"
+            }
+          ],
+          "properties": [],
+          "usedInFiles": []
+        }
+      ],
+      "variables": [
+        {
+          "name": "formatName",
+          "isExported": true,
+          "type": "(str: string) => string",
+          "usedInFiles": []
+        }
+      ]
+    },
+    "imports": [
+      {
+        "name": "vscode",
+        "path": "vscode",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "fs",
+        "path": "fs",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "path",
+        "path": "path",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "Element",
+        "path": "./tokens/root",
+        "namedImports": [
+          "Element",
+          "Field",
+          "Method",
+          "Root"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
+    ],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "item.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/item.ts",
+    "exports": {
+      "components": [],
+      "functions": [],
+      "interfaces": [],
+      "types": [],
+      "classes": [
+        {
+          "name": "ElementItem",
+          "isExported": true,
+          "methods": [
+            {
+              "name": "getChildren",
+              "params": [],
+              "returnType": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/item\").ElementItem[]"
+            }
+          ],
+          "properties": [],
+          "usedInFiles": []
+        }
+      ],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "vscode",
+        "path": "vscode",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "Element",
+        "path": "./tokens/root",
+        "namedImports": [
+          "Element"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
+      },
+      {
+        "name": "formatName",
+        "path": "./classStructure",
+        "namedImports": [
+          "formatName"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\classStructure"
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root",
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\classStructure"
+    ],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "javaPackageTreeProvider.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/javaPackageTreeProvider.ts",
+    "exports": {
+      "components": [],
+      "functions": [],
+      "interfaces": [],
+      "types": [],
+      "classes": [
+        {
+          "name": "JavaPackageTreeProvider",
+          "isExported": true,
+          "methods": [
+            {
+              "name": "getTreeItem",
+              "params": [
+                {
+                  "name": "element",
+                  "type": "JavaElement",
+                  "isRequired": true
+                }
+              ],
+              "returnType": "import(\"vscode\").TreeItem | Thenable<import(\"vscode\").TreeItem>"
+            },
+            {
+              "name": "getChildren",
+              "params": [
+                {
+                  "name": "element",
+                  "type": "JavaElement",
+                  "isRequired": false
+                }
+              ],
+              "returnType": "import(\"vscode\").ProviderResult<JavaElement[]>"
+            },
+            {
+              "name": "getDepsInPackageJson",
+              "params": [
+                {
+                  "name": "packageJsonPath",
+                  "type": "string",
+                  "isRequired": true
+                }
+              ],
+              "returnType": "JavaElement[]"
+            },
+            {
+              "name": "pathExists",
+              "params": [
+                {
+                  "name": "p",
+                  "type": "string",
+                  "isRequired": true
+                }
+              ],
+              "returnType": "boolean"
+            }
+          ],
+          "properties": [
+            {
+              "name": "onDidChangeTreeData",
+              "type": "import(\"vscode\").Event<void | JavaElement | JavaElement[]>",
+              "isRequired": false
+            }
+          ],
+          "usedInFiles": []
+        },
+        {
+          "name": "JavaElement",
+          "isExported": false,
+          "methods": [],
+          "properties": [],
+          "usedInFiles": []
+        }
+      ],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "vscode",
+        "path": "vscode",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "fs",
+        "path": "fs",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "path",
+        "path": "path",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "Element",
+        "path": "./tokens/root",
+        "namedImports": [
+          "Element",
+          "Field",
+          "Method",
+          "Root"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
+    ],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "packageTree.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/packageTree.ts",
+    "exports": {
+      "components": [],
+      "functions": [],
+      "interfaces": [],
+      "types": [],
+      "classes": [
+        {
+          "name": "PackageTreeProvider",
+          "isExported": true,
+          "methods": [
+            {
+              "name": "refresh",
+              "params": [],
+              "returnType": "void"
+            },
+            {
+              "name": "getTreeItem",
+              "params": [
+                {
+                  "name": "element",
+                  "type": "ElementItem",
+                  "isRequired": true
+                }
+              ],
+              "returnType": "import(\"vscode\").TreeItem | Thenable<import(\"vscode\").TreeItem>"
+            },
+            {
+              "name": "getChildren",
+              "params": [
+                {
+                  "name": "element",
+                  "type": "ElementItem",
+                  "isRequired": false
+                }
+              ],
+              "returnType": "import(\"vscode\").ProviderResult<ElementItem[]>"
+            }
+          ],
+          "properties": [
+            {
+              "name": "_onDidChangeTreeData",
+              "type": "import(\"vscode\").EventEmitter<void | ElementItem>",
+              "isRequired": true
+            },
+            {
+              "name": "jsonPath",
+              "type": "string",
+              "isRequired": true
+            },
+            {
+              "name": "currentElement",
+              "type": "ElementItem",
+              "isRequired": true
+            },
+            {
+              "name": "onDidChangeTreeData",
+              "type": "import(\"vscode\").Event<void | ElementItem | ElementItem[]>",
+              "isRequired": false
+            }
+          ],
+          "usedInFiles": []
+        },
+        {
+          "name": "ElementItem",
+          "isExported": false,
+          "methods": [
+            {
+              "name": "getChildren",
+              "params": [],
+              "returnType": "ElementItem[]"
+            }
+          ],
+          "properties": [],
+          "usedInFiles": []
+        }
+      ],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "vscode",
+        "path": "vscode",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "fs",
+        "path": "fs",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "path",
+        "path": "path",
+        "namedImports": [],
+        "defaultImport": "",
+        "isTypeOnly": false
+      },
+      {
+        "name": "Element",
+        "path": "./tokens/root",
+        "namedImports": [
+          "Element",
+          "Field",
+          "Method",
+          "Root"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
+      },
+      {
+        "name": "formatName",
+        "path": "./classStructure",
+        "namedImports": [
+          "formatName"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\classStructure"
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root",
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\classStructure"
+    ],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "base.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/tokens/items/base.ts",
+    "exports": {
+      "components": [],
+      "functions": [],
+      "interfaces": [],
+      "types": [],
+      "classes": [
+        {
+          "name": "BaseItem",
+          "isExported": true,
+          "methods": [],
+          "properties": [
+            {
+              "name": "tooltip",
+              "type": "string",
+              "isRequired": false
+            }
+          ],
+          "usedInFiles": []
+        }
+      ],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "MarkdownString",
+        "path": "vscode",
+        "namedImports": [
+          "MarkdownString",
+          "Range",
+          "TreeItem",
+          "TreeItemCollapsibleState"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "class.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/tokens/items/class.ts",
+    "exports": {
+      "components": [],
+      "functions": [],
+      "interfaces": [],
+      "types": [],
+      "classes": [
+        {
+          "name": "ClassItem",
+          "isExported": true,
+          "methods": [],
+          "properties": [
+            {
+              "name": "contextValue",
+              "type": "string",
+              "isRequired": false
+            }
+          ],
+          "usedInFiles": []
+        }
+      ],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "BaseItem",
+        "path": "./base",
+        "namedImports": [
+          "BaseItem"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\items\\base"
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\items\\base"
+    ],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "field.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/tokens/items/field.ts",
+    "exports": {
+      "components": [],
+      "functions": [],
+      "interfaces": [],
+      "types": [],
+      "classes": [
+        {
+          "name": "FieldItem",
+          "isExported": true,
+          "methods": [],
+          "properties": [
+            {
+              "name": "contextValue",
+              "type": "string",
+              "isRequired": false
+            }
+          ],
+          "usedInFiles": []
+        }
+      ],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "BaseItem",
+        "path": "./base",
+        "namedImports": [
+          "BaseItem"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\items\\base"
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\items\\base"
+    ],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "index.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/tokens/items/index.ts",
+    "exports": {
+      "components": [],
+      "functions": [],
+      "interfaces": [],
+      "types": [],
+      "classes": [],
+      "variables": []
+    },
+    "imports": [],
+    "incomingDependencies": [],
+    "outgoingDependencies": [],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "method.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/tokens/items/method.ts",
+    "exports": {
+      "components": [],
+      "functions": [],
+      "interfaces": [],
+      "types": [],
+      "classes": [
+        {
+          "name": "MethodItem",
+          "isExported": true,
+          "methods": [],
+          "properties": [
+            {
+              "name": "contextValue",
+              "type": "string",
+              "isRequired": false
+            }
+          ],
+          "usedInFiles": []
+        }
+      ],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "BaseItem",
+        "path": "./base",
+        "namedImports": [
+          "BaseItem"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false,
+        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\items\\base"
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [
+      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\items\\base"
+    ],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "root.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/tokens/root.ts",
+    "exports": {
+      "components": [],
+      "functions": [],
+      "interfaces": [
+        {
+          "name": "Root",
+          "isExported": true,
+          "properties": [
+            {
+              "name": "name",
+              "type": "string",
+              "isRequired": true
+            },
+            {
+              "name": "elements",
+              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element[]",
+              "isRequired": true
+            },
+            {
+              "name": "abstractClassCount",
+              "type": "number",
+              "isRequired": true
+            },
+            {
+              "name": "concreteClassCount",
+              "type": "number",
+              "isRequired": true
+            },
+            {
+              "name": "classCount",
+              "type": "number",
+              "isRequired": true
+            },
+            {
+              "name": "class",
+              "type": "boolean",
+              "isRequired": true
+            },
+            {
+              "name": "package",
+              "type": "boolean",
+              "isRequired": true
+            }
+          ],
+          "usedInFiles": []
+        },
+        {
+          "name": "Element",
+          "isExported": true,
+          "properties": [
+            {
+              "name": "packageName",
+              "type": "string",
+              "isRequired": true
+            },
+            {
+              "name": "sourceFile",
+              "type": "string",
+              "isRequired": true
+            },
+            {
+              "name": "signature",
+              "type": "string",
+              "isRequired": true
+            },
+            {
+              "name": "fields",
+              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Field[]",
+              "isRequired": true
+            },
+            {
+              "name": "methods",
+              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Method[]",
+              "isRequired": true
+            },
+            {
+              "name": "outGoingDependencies",
+              "type": "string[]",
+              "isRequired": true
+            },
+            {
+              "name": "incomingDependencies",
+              "type": "string[]",
+              "isRequired": true
+            },
+            {
+              "name": "superClassName",
+              "type": "string[]",
+              "isRequired": true
+            },
+            {
+              "name": "interfaces",
+              "type": "string[]",
+              "isRequired": true
+            },
+            {
+              "name": "interface",
+              "type": "boolean",
+              "isRequired": true
+            },
+            {
+              "name": "elements",
+              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element[]",
+              "isRequired": true
+            },
+            {
+              "name": "importedPackages",
+              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").ImportedPackage[]",
+              "isRequired": true
+            },
+            {
+              "name": "class",
+              "type": "boolean",
+              "isRequired": true
+            },
+            {
+              "name": "final",
+              "type": "boolean",
+              "isRequired": true
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "isRequired": true
+            },
+            {
+              "name": "abstract",
+              "type": "boolean",
+              "isRequired": true
+            },
+            {
+              "name": "package",
+              "type": "boolean",
+              "isRequired": true
+            }
+          ],
+          "usedInFiles": []
+        },
+        {
+          "name": "Method",
+          "isExported": true,
+          "properties": [
+            {
+              "name": "accessModifier",
+              "type": "string",
+              "isRequired": true
+            },
+            {
+              "name": "static",
+              "type": "boolean",
+              "isRequired": true
+            },
+            {
+              "name": "final",
+              "type": "boolean",
+              "isRequired": true
+            },
+            {
+              "name": "abstract",
+              "type": "boolean",
+              "isRequired": true
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "isRequired": true
+            },
+            {
+              "name": "parameters",
+              "type": "string[]",
+              "isRequired": true
+            },
+            {
+              "name": "returnType",
+              "type": "string",
+              "isRequired": true
+            }
+          ],
+          "usedInFiles": []
+        },
+        {
+          "name": "Field",
+          "isExported": true,
+          "properties": [
+            {
+              "name": "name",
+              "type": "string",
+              "isRequired": true
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "isRequired": true
+            },
+            {
+              "name": "static",
+              "type": "boolean",
+              "isRequired": true
+            },
+            {
+              "name": "final",
+              "type": "boolean",
+              "isRequired": true
+            },
+            {
+              "name": "modifier",
+              "type": "string",
+              "isRequired": true
+            }
+          ],
+          "usedInFiles": []
+        },
+        {
+          "name": "ImportedPackage",
+          "isExported": true,
+          "properties": [
+            {
+              "name": "name",
+              "type": "string",
+              "isRequired": true
+            },
+            {
+              "name": "elements",
+              "type": "any[]",
+              "isRequired": true
+            },
+            {
+              "name": "abstractClassCount",
+              "type": "number",
+              "isRequired": true
+            },
+            {
+              "name": "concreteClassCount",
+              "type": "number",
+              "isRequired": true
+            },
+            {
+              "name": "classCount",
+              "type": "number",
+              "isRequired": true
+            },
+            {
+              "name": "class",
+              "type": "boolean",
+              "isRequired": true
+            },
+            {
+              "name": "package",
+              "type": "boolean",
+              "isRequired": true
+            }
+          ],
+          "usedInFiles": []
+        }
+      ],
+      "types": [],
+      "classes": [],
+      "variables": []
+    },
+    "imports": [],
+    "incomingDependencies": [],
+    "outgoingDependencies": [],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "base.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/tokens/tree/base.ts",
+    "exports": {
+      "components": [],
+      "functions": [],
+      "interfaces": [
+        {
+          "name": "IBaseToken",
+          "isExported": true,
+          "properties": [
+            {
+              "name": "name",
+              "type": "string",
+              "isRequired": true
+            },
+            {
+              "name": "position",
+              "type": "import(\"vscode\").Range",
+              "isRequired": false
+            },
+            {
+              "name": "contextName",
+              "type": "string",
+              "isRequired": false
+            }
+          ],
+          "usedInFiles": []
+        }
+      ],
+      "types": [],
+      "classes": [],
+      "variables": []
+    },
+    "imports": [
+      {
+        "name": "Range",
+        "path": "vscode",
+        "namedImports": [
+          "Range"
+        ],
+        "defaultImport": "",
+        "isTypeOnly": false
+      }
+    ],
+    "incomingDependencies": [],
+    "outgoingDependencies": [],
+    "usedByComponents": []
+  },
+  {
+    "fileName": "tree.ts",
+    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/tokens/tree/tree.ts",
+    "exports": {
+      "components": [],
+      "functions": [],
+      "interfaces": [],
+      "types": [],
+      "classes": [],
+      "variables": []
+    },
+    "imports": [],
+    "incomingDependencies": [],
+    "outgoingDependencies": [],
+    "usedByComponents": []
+  }
+]

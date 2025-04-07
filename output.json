@@ -1,0 +1,2271 @@
+{
+  "nodes": [
+    {
+      "id": "java_com_sample_book_TextBook",
+      "title": "TextBook",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_book_TextBook_info",
+          "name": "Class Info",
+          "items": [
+            {
+              "id": "extends_com_sample_book_TextBook_extends",
+              "value": "extends Book",
+              "icon": "inheritance"
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_TextBook_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_book_TextBook_subject",
+              "value": "private String subject",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_book_TextBook_edition",
+              "value": "private String edition",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_book_TextBook_usedInCourses",
+              "value": "private Course> usedInCourses",
+              "icon": "field",
+              "metadata": {
+                "type": "java.util.List<com.sample.book.Course>"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_TextBook_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_book_TextBook__init_",
+              "value": "public TextBook(String, String, String, int, String, String, String)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_book_TextBook_calculateLateFee",
+              "value": "public calculateLateFee(int): double",
+              "icon": "method",
+              "metadata": {
+                "returnType": "double",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_TextBook_addCourseReference",
+              "value": "public addCourseReference(Course): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_TextBook_isCurrentEdition",
+              "value": "public isCurrentEdition(): boolean",
+              "icon": "method",
+              "metadata": {
+                "returnType": "boolean",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_TextBook_generateBookOrder",
+              "value": "public generateBookOrder(int): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_TextBook_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_book_TextBook_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_book_TextBook_java_util",
+              "value": "java.util",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.book.TextBook",
+        "packageName": "com.sample.book",
+        "sourceFile": "TextBook.java",
+        "isAbstract": false,
+        "isFinal": false
+      }
+    },
+    {
+      "id": "java_com_sample_book_BookReview",
+      "title": "BookReview",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_book_BookReview_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_book_BookReview_reviewId",
+              "value": "private String reviewId",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_book_BookReview_reviewer",
+              "value": "private User reviewer",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.user.User"
+              }
+            },
+            {
+              "id": "field_com_sample_book_BookReview_book",
+              "value": "private Book book",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.book.Book"
+              }
+            },
+            {
+              "id": "field_com_sample_book_BookReview_content",
+              "value": "private String content",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_book_BookReview_rating",
+              "value": "private int rating",
+              "icon": "field",
+              "metadata": {
+                "type": "int"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_BookReview_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_book_BookReview__init_",
+              "value": "public BookReview(String, User, Book, String, int)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_book_BookReview_updateReview",
+              "value": "public updateReview(String, int): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_BookReview_isValidRating",
+              "value": "public isValidRating(): boolean",
+              "icon": "method",
+              "metadata": {
+                "returnType": "boolean",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_BookReview_formatReview",
+              "value": "public formatReview(): String",
+              "icon": "method",
+              "metadata": {
+                "returnType": "java.lang.String",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_BookReview_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_book_BookReview_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_book_BookReview_com_sample_user",
+              "value": "com.sample.user",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.book.BookReview",
+        "packageName": "com.sample.book",
+        "sourceFile": "BookReview.java",
+        "isAbstract": false,
+        "isFinal": false
+      }
+    },
+    {
+      "id": "java_com_sample_book_Department",
+      "title": "Department",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_book_Department_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_book_Department_departmentId",
+              "value": "private String departmentId",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_book_Department_name",
+              "value": "private String name",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_book_Department_head",
+              "value": "private Faculty head",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.user.Faculty"
+              }
+            },
+            {
+              "id": "field_com_sample_book_Department_courses",
+              "value": "private Course> courses",
+              "icon": "field",
+              "metadata": {
+                "type": "java.util.List<com.sample.book.Course>"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_Department_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_book_Department__init_",
+              "value": "public Department(String, String)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_book_Department_assignDepartmentHead",
+              "value": "public assignDepartmentHead(Faculty): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_Department_addCourse",
+              "value": "public addCourse(Course): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_Department_getAllFacultyMembers",
+              "value": "public getAllFacultyMembers(): Faculty>",
+              "icon": "method",
+              "metadata": {
+                "returnType": "java.util.List<com.sample.user.Faculty>",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_Department_generateDepartmentReport",
+              "value": "public generateDepartmentReport(): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_Department_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_book_Department_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_book_Department_java_util",
+              "value": "java.util",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_book_Department_com_sample_user",
+              "value": "com.sample.user",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.book.Department",
+        "packageName": "com.sample.book",
+        "sourceFile": "Department.java",
+        "isAbstract": false,
+        "isFinal": false
+      }
+    },
+    {
+      "id": "java_com_sample_book_LibraryItem",
+      "title": "LibraryItem",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_book_LibraryItem_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_book_LibraryItem_itemId",
+              "value": "protected String itemId",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_book_LibraryItem_title",
+              "value": "protected String title",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_book_LibraryItem_publisher",
+              "value": "protected String publisher",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_book_LibraryItem_year",
+              "value": "protected int year",
+              "icon": "field",
+              "metadata": {
+                "type": "int"
+              }
+            },
+            {
+              "id": "field_com_sample_book_LibraryItem_status",
+              "value": "protected ItemStatus status",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.book.ItemStatus"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_LibraryItem_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_book_LibraryItem__init_",
+              "value": "public LibraryItem(String, String, String, int)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_book_LibraryItem_updateStatus",
+              "value": "public updateStatus(ItemStatus): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_LibraryItem_isAvailable",
+              "value": "public isAvailable(): boolean",
+              "icon": "method",
+              "metadata": {
+                "returnType": "boolean",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_LibraryItem_generateItemBarcode",
+              "value": "public generateItemBarcode(): String",
+              "icon": "method",
+              "metadata": {
+                "returnType": "java.lang.String",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_LibraryItem_calculateLateFee",
+              "value": "public abstract calculateLateFee(int): double",
+              "icon": "method",
+              "metadata": {
+                "returnType": "double",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_LibraryItem_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_book_LibraryItem_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_book_LibraryItem_java_lang_invoke",
+              "value": "java.lang.invoke",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.book.LibraryItem",
+        "packageName": "com.sample.book",
+        "sourceFile": "LibraryItem.java",
+        "isAbstract": true,
+        "isFinal": false
+      }
+    },
+    {
+      "id": "java_com_sample_book_ItemStatus",
+      "title": "ItemStatus",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_book_ItemStatus_info",
+          "name": "Class Info",
+          "items": [
+            {
+              "id": "extends_com_sample_book_ItemStatus_extends",
+              "value": "extends Enum",
+              "icon": "inheritance"
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_ItemStatus_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_book_ItemStatus_AVAILABLE",
+              "value": "public static final ItemStatus AVAILABLE",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.book.ItemStatus"
+              }
+            },
+            {
+              "id": "field_com_sample_book_ItemStatus_BORROWED",
+              "value": "public static final ItemStatus BORROWED",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.book.ItemStatus"
+              }
+            },
+            {
+              "id": "field_com_sample_book_ItemStatus_RESERVED",
+              "value": "public static final ItemStatus RESERVED",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.book.ItemStatus"
+              }
+            },
+            {
+              "id": "field_com_sample_book_ItemStatus_MAINTENANCE",
+              "value": "public static final ItemStatus MAINTENANCE",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.book.ItemStatus"
+              }
+            },
+            {
+              "id": "field_com_sample_book_ItemStatus_ENUM_VALUES",
+              "value": "private static final ItemStatus[] ENUM$VALUES",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.book.ItemStatus[]"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_ItemStatus_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_book_ItemStatus__clinit_",
+              "value": "default static <clinit>(): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_ItemStatus__init_",
+              "value": "private ItemStatus(String, int)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_book_ItemStatus_values",
+              "value": "public static values(): ItemStatus[]",
+              "icon": "method",
+              "metadata": {
+                "returnType": "com.sample.book.ItemStatus[]",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_ItemStatus_valueOf",
+              "value": "public static valueOf(String): ItemStatus",
+              "icon": "method",
+              "metadata": {
+                "returnType": "com.sample.book.ItemStatus",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_ItemStatus_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_book_ItemStatus_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.book.ItemStatus",
+        "packageName": "com.sample.book",
+        "sourceFile": "ItemStatus.java",
+        "isAbstract": false,
+        "isFinal": true
+      }
+    },
+    {
+      "id": "java_com_sample_book_Course",
+      "title": "Course",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_book_Course_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_book_Course_courseId",
+              "value": "private String courseId",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_book_Course_name",
+              "value": "private String name",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_book_Course_instructor",
+              "value": "private Faculty instructor",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.user.Faculty"
+              }
+            },
+            {
+              "id": "field_com_sample_book_Course_requiredBooks",
+              "value": "private TextBook> requiredBooks",
+              "icon": "field",
+              "metadata": {
+                "type": "java.util.List<com.sample.book.TextBook>"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_Course_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_book_Course__init_",
+              "value": "public Course(String, String, Faculty)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_book_Course_addRequiredBook",
+              "value": "public addRequiredBook(TextBook): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_Course_updateInstructor",
+              "value": "public updateInstructor(Faculty): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_Course_getEnrolledStudents",
+              "value": "public getEnrolledStudents(): Student>",
+              "icon": "method",
+              "metadata": {
+                "returnType": "java.util.List<com.sample.user.Student>",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_Course_generateSyllabus",
+              "value": "public generateSyllabus(): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_Course_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_book_Course_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_book_Course_java_util",
+              "value": "java.util",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_book_Course_com_sample_user",
+              "value": "com.sample.user",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.book.Course",
+        "packageName": "com.sample.book",
+        "sourceFile": "Course.java",
+        "isAbstract": false,
+        "isFinal": false
+      }
+    },
+    {
+      "id": "java_com_sample_book_Book",
+      "title": "Book",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_book_Book_info",
+          "name": "Class Info",
+          "items": [
+            {
+              "id": "extends_com_sample_book_Book_extends",
+              "value": "extends LibraryItem",
+              "icon": "inheritance"
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_Book_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_book_Book_author",
+              "value": "private String author",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_book_Book_isbn",
+              "value": "private String isbn",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_book_Book_reviews",
+              "value": "private BookReview> reviews",
+              "icon": "field",
+              "metadata": {
+                "type": "java.util.List<com.sample.book.BookReview>"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_Book_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_book_Book__init_",
+              "value": "public Book(String, String, String, int, String)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_book_Book_calculateLateFee",
+              "value": "public calculateLateFee(int): double",
+              "icon": "method",
+              "metadata": {
+                "returnType": "double",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_Book_addReview",
+              "value": "public addReview(BookReview): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_Book_getAverageRating",
+              "value": "public getAverageRating(): double",
+              "icon": "method",
+              "metadata": {
+                "returnType": "double",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_book_Book_generateCatalogEntry",
+              "value": "public generateCatalogEntry(): String",
+              "icon": "method",
+              "metadata": {
+                "returnType": "java.lang.String",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_book_Book_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_book_Book_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_book_Book_java_util",
+              "value": "java.util",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.book.Book",
+        "packageName": "com.sample.book",
+        "sourceFile": "Book.java",
+        "isAbstract": false,
+        "isFinal": false
+      }
+    },
+    {
+      "id": "java_com_sample_Library",
+      "title": "Library",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_Library_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_Library_name",
+              "value": "private String name",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_Library_address",
+              "value": "private Address address",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.user.Address"
+              }
+            },
+            {
+              "id": "field_com_sample_Library_items",
+              "value": "private LibraryItem> items",
+              "icon": "field",
+              "metadata": {
+                "type": "java.util.List<com.sample.book.LibraryItem>"
+              }
+            },
+            {
+              "id": "field_com_sample_Library_users",
+              "value": "private User> users",
+              "icon": "field",
+              "metadata": {
+                "type": "java.util.List<com.sample.user.User>"
+              }
+            },
+            {
+              "id": "field_com_sample_Library_activeLoans",
+              "value": "private Loan> activeLoans",
+              "icon": "field",
+              "metadata": {
+                "type": "java.util.List<com.sample.loan.Loan>"
+              }
+            },
+            {
+              "id": "field_com_sample_Library_outstandingFines",
+              "value": "private Fine> outstandingFines",
+              "icon": "field",
+              "metadata": {
+                "type": "java.util.List<com.sample.fine.Fine>"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_Library_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_Library__init_",
+              "value": "public Library(String, Address)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_Library_addNewItem",
+              "value": "public addNewItem(LibraryItem): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_Library_registerUser",
+              "value": "public registerUser(User): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_Library_createLoan",
+              "value": "public createLoan(User, LibraryItem): Loan",
+              "icon": "method",
+              "metadata": {
+                "returnType": "com.sample.loan.Loan",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_Library_processReturn",
+              "value": "public processReturn(Loan): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_Library_generateLoanId",
+              "value": "private generateLoanId(): String",
+              "icon": "method",
+              "metadata": {
+                "returnType": "java.lang.String",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_Library_generateFineId",
+              "value": "private generateFineId(): String",
+              "icon": "method",
+              "metadata": {
+                "returnType": "java.lang.String",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_Library_searchCatalog",
+              "value": "public searchCatalog(String): LibraryItem>",
+              "icon": "method",
+              "metadata": {
+                "returnType": "java.util.List<com.sample.book.LibraryItem>",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_Library_generateDailyReport",
+              "value": "public generateDailyReport(): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_Library_sendOverdueNotifications",
+              "value": "public sendOverdueNotifications(): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_Library_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_Library_com_sample_book",
+              "value": "com.sample.book",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_Library_com_sample_loan",
+              "value": "com.sample.loan",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_Library_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_Library_java_util",
+              "value": "java.util",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_Library_com_sample_fine",
+              "value": "com.sample.fine",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_Library_com_sample_user",
+              "value": "com.sample.user",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_Library_java_lang_invoke",
+              "value": "java.lang.invoke",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.Library",
+        "packageName": "com.sample",
+        "sourceFile": "Library.java",
+        "isAbstract": false,
+        "isFinal": false
+      }
+    },
+    {
+      "id": "java_com_sample_loan_LoanStatus",
+      "title": "LoanStatus",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_loan_LoanStatus_info",
+          "name": "Class Info",
+          "items": [
+            {
+              "id": "extends_com_sample_loan_LoanStatus_extends",
+              "value": "extends Enum",
+              "icon": "inheritance"
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_loan_LoanStatus_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_loan_LoanStatus_ACTIVE",
+              "value": "public static final LoanStatus ACTIVE",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.loan.LoanStatus"
+              }
+            },
+            {
+              "id": "field_com_sample_loan_LoanStatus_RETURNED",
+              "value": "public static final LoanStatus RETURNED",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.loan.LoanStatus"
+              }
+            },
+            {
+              "id": "field_com_sample_loan_LoanStatus_OVERDUE",
+              "value": "public static final LoanStatus OVERDUE",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.loan.LoanStatus"
+              }
+            },
+            {
+              "id": "field_com_sample_loan_LoanStatus_ENUM_VALUES",
+              "value": "private static final LoanStatus[] ENUM$VALUES",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.loan.LoanStatus[]"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_loan_LoanStatus_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_loan_LoanStatus__clinit_",
+              "value": "default static <clinit>(): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_loan_LoanStatus__init_",
+              "value": "private LoanStatus(String, int)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_loan_LoanStatus_values",
+              "value": "public static values(): LoanStatus[]",
+              "icon": "method",
+              "metadata": {
+                "returnType": "com.sample.loan.LoanStatus[]",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_loan_LoanStatus_valueOf",
+              "value": "public static valueOf(String): LoanStatus",
+              "icon": "method",
+              "metadata": {
+                "returnType": "com.sample.loan.LoanStatus",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_loan_LoanStatus_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_loan_LoanStatus_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.loan.LoanStatus",
+        "packageName": "com.sample.loan",
+        "sourceFile": "LoanStatus.java",
+        "isAbstract": false,
+        "isFinal": true
+      }
+    },
+    {
+      "id": "java_com_sample_loan_Loan",
+      "title": "Loan",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_loan_Loan_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_loan_Loan_loanId",
+              "value": "private String loanId",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_loan_Loan_borrower",
+              "value": "private User borrower",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.user.User"
+              }
+            },
+            {
+              "id": "field_com_sample_loan_Loan_item",
+              "value": "private LibraryItem item",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.book.LibraryItem"
+              }
+            },
+            {
+              "id": "field_com_sample_loan_Loan_borrowDate",
+              "value": "private LocalDate borrowDate",
+              "icon": "field",
+              "metadata": {
+                "type": "java.time.LocalDate"
+              }
+            },
+            {
+              "id": "field_com_sample_loan_Loan_dueDate",
+              "value": "private LocalDate dueDate",
+              "icon": "field",
+              "metadata": {
+                "type": "java.time.LocalDate"
+              }
+            },
+            {
+              "id": "field_com_sample_loan_Loan_status",
+              "value": "private LoanStatus status",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.loan.LoanStatus"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_loan_Loan_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_loan_Loan__init_",
+              "value": "public Loan(String, User, LibraryItem)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_loan_Loan_extendLoan",
+              "value": "public extendLoan(int): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_loan_Loan_isOverdue",
+              "value": "public isOverdue(): boolean",
+              "icon": "method",
+              "metadata": {
+                "returnType": "boolean",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_loan_Loan_returnItem",
+              "value": "public returnItem(): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_loan_Loan_calculateOverdueFee",
+              "value": "public calculateOverdueFee(): double",
+              "icon": "method",
+              "metadata": {
+                "returnType": "double",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_loan_Loan_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_loan_Loan_com_sample_book",
+              "value": "com.sample.book",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_loan_Loan_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_loan_Loan_java_time",
+              "value": "java.time",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_loan_Loan_com_sample_user",
+              "value": "com.sample.user",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_loan_Loan_java_time_temporal",
+              "value": "java.time.temporal",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.loan.Loan",
+        "packageName": "com.sample.loan",
+        "sourceFile": "Loan.java",
+        "isAbstract": false,
+        "isFinal": false
+      }
+    },
+    {
+      "id": "java_com_sample_fine_Fine",
+      "title": "Fine",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_fine_Fine_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_fine_Fine_fineId",
+              "value": "private String fineId",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_fine_Fine_loan",
+              "value": "private Loan loan",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.loan.Loan"
+              }
+            },
+            {
+              "id": "field_com_sample_fine_Fine_amount",
+              "value": "default double amount",
+              "icon": "field",
+              "metadata": {
+                "type": "double"
+              }
+            },
+            {
+              "id": "field_com_sample_fine_Fine_isPaid",
+              "value": "private boolean isPaid",
+              "icon": "field",
+              "metadata": {
+                "type": "boolean"
+              }
+            },
+            {
+              "id": "field_com_sample_fine_Fine_issueDate",
+              "value": "private LocalDate issueDate",
+              "icon": "field",
+              "metadata": {
+                "type": "java.time.LocalDate"
+              }
+            },
+            {
+              "id": "field_com_sample_fine_Fine_payment",
+              "value": "private Payment payment",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.fine.Payment"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_fine_Fine_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_fine_Fine__init_",
+              "value": "public Fine(String, Loan, double)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_fine_Fine_processPayment",
+              "value": "public processPayment(Payment): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_fine_Fine_calculateLateFee",
+              "value": "public calculateLateFee(): double",
+              "icon": "method",
+              "metadata": {
+                "returnType": "double",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_fine_Fine_sendReminderNotification",
+              "value": "public sendReminderNotification(): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_fine_Fine_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_fine_Fine_com_sample_loan",
+              "value": "com.sample.loan",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_fine_Fine_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_fine_Fine_java_time",
+              "value": "java.time",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.fine.Fine",
+        "packageName": "com.sample.fine",
+        "sourceFile": "Fine.java",
+        "isAbstract": false,
+        "isFinal": false
+      }
+    },
+    {
+      "id": "java_com_sample_fine_PaymentMethod",
+      "title": "PaymentMethod",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_fine_PaymentMethod_info",
+          "name": "Class Info",
+          "items": [
+            {
+              "id": "extends_com_sample_fine_PaymentMethod_extends",
+              "value": "extends Enum",
+              "icon": "inheritance"
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_fine_PaymentMethod_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_fine_PaymentMethod_CASH",
+              "value": "public static final PaymentMethod CASH",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.fine.PaymentMethod"
+              }
+            },
+            {
+              "id": "field_com_sample_fine_PaymentMethod_CREDIT_CARD",
+              "value": "public static final PaymentMethod CREDIT_CARD",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.fine.PaymentMethod"
+              }
+            },
+            {
+              "id": "field_com_sample_fine_PaymentMethod_DEBIT_CARD",
+              "value": "public static final PaymentMethod DEBIT_CARD",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.fine.PaymentMethod"
+              }
+            },
+            {
+              "id": "field_com_sample_fine_PaymentMethod_ONLINE_TRANSFER",
+              "value": "public static final PaymentMethod ONLINE_TRANSFER",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.fine.PaymentMethod"
+              }
+            },
+            {
+              "id": "field_com_sample_fine_PaymentMethod_ENUM_VALUES",
+              "value": "private static final PaymentMethod[] ENUM$VALUES",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.fine.PaymentMethod[]"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_fine_PaymentMethod_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_fine_PaymentMethod__clinit_",
+              "value": "default static <clinit>(): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_fine_PaymentMethod__init_",
+              "value": "private PaymentMethod(String, int)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_fine_PaymentMethod_values",
+              "value": "public static values(): PaymentMethod[]",
+              "icon": "method",
+              "metadata": {
+                "returnType": "com.sample.fine.PaymentMethod[]",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_fine_PaymentMethod_valueOf",
+              "value": "public static valueOf(String): PaymentMethod",
+              "icon": "method",
+              "metadata": {
+                "returnType": "com.sample.fine.PaymentMethod",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_fine_PaymentMethod_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_fine_PaymentMethod_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.fine.PaymentMethod",
+        "packageName": "com.sample.fine",
+        "sourceFile": "PaymentMethod.java",
+        "isAbstract": false,
+        "isFinal": true
+      }
+    },
+    {
+      "id": "java_com_sample_fine_Payment",
+      "title": "Payment",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_fine_Payment_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_fine_Payment_paymentId",
+              "value": "private String paymentId",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_fine_Payment_fine",
+              "value": "private Fine fine",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.fine.Fine"
+              }
+            },
+            {
+              "id": "field_com_sample_fine_Payment_amount",
+              "value": "private double amount",
+              "icon": "field",
+              "metadata": {
+                "type": "double"
+              }
+            },
+            {
+              "id": "field_com_sample_fine_Payment_paymentDate",
+              "value": "private LocalDateTime paymentDate",
+              "icon": "field",
+              "metadata": {
+                "type": "java.time.LocalDateTime"
+              }
+            },
+            {
+              "id": "field_com_sample_fine_Payment_method",
+              "value": "private PaymentMethod method",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.fine.PaymentMethod"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_fine_Payment_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_fine_Payment__init_",
+              "value": "public Payment(String, Fine, double)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_fine_Payment_validatePayment",
+              "value": "public validatePayment(): boolean",
+              "icon": "method",
+              "metadata": {
+                "returnType": "boolean",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_fine_Payment_generateReceipt",
+              "value": "public generateReceipt(): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_fine_Payment_recordTransaction",
+              "value": "public recordTransaction(): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_fine_Payment_processRefund",
+              "value": "public processRefund(): boolean",
+              "icon": "method",
+              "metadata": {
+                "returnType": "boolean",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_fine_Payment_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_fine_Payment_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_fine_Payment_java_time",
+              "value": "java.time",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.fine.Payment",
+        "packageName": "com.sample.fine",
+        "sourceFile": "Payment.java",
+        "isAbstract": false,
+        "isFinal": false
+      }
+    },
+    {
+      "id": "java_com_sample_Main",
+      "title": "Main",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_Main_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_Main__init_",
+              "value": "public Main()",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_Main_main",
+              "value": "public static main(String[]): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_Main_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_Main_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_Main_java_io",
+              "value": "java.io",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.Main",
+        "packageName": "com.sample",
+        "sourceFile": "Main.java",
+        "isAbstract": false,
+        "isFinal": false
+      }
+    },
+    {
+      "id": "java_com_sample_user_Student",
+      "title": "Student",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_user_Student_info",
+          "name": "Class Info",
+          "items": [
+            {
+              "id": "extends_com_sample_user_Student_extends",
+              "value": "extends User",
+              "icon": "inheritance"
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_user_Student_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_user_Student_studentId",
+              "value": "private String studentId",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_user_Student_department",
+              "value": "private Department department",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.book.Department"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_user_Student_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_user_Student__init_",
+              "value": "public Student(String, String, String, Address, String, Department)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_user_Student_canBorrowBooks",
+              "value": "public canBorrowBooks(): boolean",
+              "icon": "method",
+              "metadata": {
+                "returnType": "boolean",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_user_Student_getCheckedOutBooks",
+              "value": "public getCheckedOutBooks(): Book>",
+              "icon": "method",
+              "metadata": {
+                "returnType": "java.util.List<com.sample.book.Book>",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_user_Student_isEligibleForNewLoan",
+              "value": "public isEligibleForNewLoan(): boolean",
+              "icon": "method",
+              "metadata": {
+                "returnType": "boolean",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_user_Student_enrollInCourse",
+              "value": "public enrollInCourse(Course): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_user_Student_generateStudentLibraryCard",
+              "value": "public generateStudentLibraryCard(): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_user_Student_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_user_Student_com_sample_book",
+              "value": "com.sample.book",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_user_Student_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_user_Student_java_util",
+              "value": "java.util",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.user.Student",
+        "packageName": "com.sample.user",
+        "sourceFile": "Student.java",
+        "isAbstract": false,
+        "isFinal": false
+      }
+    },
+    {
+      "id": "java_com_sample_user_Faculty",
+      "title": "Faculty",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_user_Faculty_info",
+          "name": "Class Info",
+          "items": [
+            {
+              "id": "extends_com_sample_user_Faculty_extends",
+              "value": "extends User",
+              "icon": "inheritance"
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_user_Faculty_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_user_Faculty_facultyId",
+              "value": "private String facultyId",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_user_Faculty_department",
+              "value": "private Department department",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.book.Department"
+              }
+            },
+            {
+              "id": "field_com_sample_user_Faculty_courses",
+              "value": "private Course> courses",
+              "icon": "field",
+              "metadata": {
+                "type": "java.util.List<com.sample.book.Course>"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_user_Faculty_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_user_Faculty__init_",
+              "value": "public Faculty(String, String, String, Address, String, Department)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_user_Faculty_canBorrowBooks",
+              "value": "public canBorrowBooks(): boolean",
+              "icon": "method",
+              "metadata": {
+                "returnType": "boolean",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_user_Faculty_assignCourse",
+              "value": "public assignCourse(Course): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_user_Faculty_getRequestedTextBooks",
+              "value": "public getRequestedTextBooks(): TextBook>",
+              "icon": "method",
+              "metadata": {
+                "returnType": "java.util.List<com.sample.book.TextBook>",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_user_Faculty_submitBookRequest",
+              "value": "public submitBookRequest(Book): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_user_Faculty_getEnrolledStudents",
+              "value": "public getEnrolledStudents(): Student>",
+              "icon": "method",
+              "metadata": {
+                "returnType": "java.util.List<com.sample.user.Student>",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_user_Faculty_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_user_Faculty_com_sample_book",
+              "value": "com.sample.book",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_user_Faculty_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            },
+            {
+              "id": "import_com_sample_user_Faculty_java_util",
+              "value": "java.util",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.user.Faculty",
+        "packageName": "com.sample.user",
+        "sourceFile": "Faculty.java",
+        "isAbstract": false,
+        "isFinal": false
+      }
+    },
+    {
+      "id": "java_com_sample_user_User",
+      "title": "User",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_user_User_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_user_User_id",
+              "value": "protected String id",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_user_User_name",
+              "value": "public String name",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_user_User_email",
+              "value": "protected String email",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_user_User_address",
+              "value": "protected Address address",
+              "icon": "field",
+              "metadata": {
+                "type": "com.sample.user.Address"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_user_User_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_user_User__init_",
+              "value": "public User(String, String, String, Address)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_user_User_generateUserReport",
+              "value": "public generateUserReport(): String",
+              "icon": "method",
+              "metadata": {
+                "returnType": "java.lang.String",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_user_User_updateContactInfo",
+              "value": "public updateContactInfo(String, Address): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_user_User_validateUserCredentials",
+              "value": "public validateUserCredentials(String, String): boolean",
+              "icon": "method",
+              "metadata": {
+                "returnType": "boolean",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_user_User_getName",
+              "value": "public getName(): String",
+              "icon": "method",
+              "metadata": {
+                "returnType": "java.lang.String",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_user_User_canBorrowBooks",
+              "value": "public abstract canBorrowBooks(): boolean",
+              "icon": "method",
+              "metadata": {
+                "returnType": "boolean",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_user_User_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_user_User_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.user.User",
+        "packageName": "com.sample.user",
+        "sourceFile": "User.java",
+        "isAbstract": true,
+        "isFinal": false
+      }
+    },
+    {
+      "id": "java_com_sample_user_Address",
+      "title": "Address",
+      "type": "class",
+      "sections": [
+        {
+          "id": "sec_java_com_sample_user_Address_fields",
+          "name": "Fields",
+          "items": [
+            {
+              "id": "field_com_sample_user_Address_street",
+              "value": "private String street",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_user_Address_city",
+              "value": "private String city",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_user_Address_state",
+              "value": "private String state",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            },
+            {
+              "id": "field_com_sample_user_Address_zipCode",
+              "value": "private String zipCode",
+              "icon": "field",
+              "metadata": {
+                "type": "java.lang.String"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_user_Address_methods",
+          "name": "Methods",
+          "items": [
+            {
+              "id": "method_com_sample_user_Address__init_",
+              "value": "public Address(String, String, String, String)",
+              "icon": "constructor",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": true
+              }
+            },
+            {
+              "id": "method_com_sample_user_Address_getFormattedAddress",
+              "value": "public getFormattedAddress(): String",
+              "icon": "method",
+              "metadata": {
+                "returnType": "java.lang.String",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_user_Address_isValidZipCode",
+              "value": "public isValidZipCode(): boolean",
+              "icon": "method",
+              "metadata": {
+                "returnType": "boolean",
+                "isConstructor": false
+              }
+            },
+            {
+              "id": "method_com_sample_user_Address_updateAddress",
+              "value": "public updateAddress(String, String, String, String): void",
+              "icon": "method",
+              "metadata": {
+                "returnType": "void",
+                "isConstructor": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec_java_com_sample_user_Address_imports",
+          "name": "Imports",
+          "items": [
+            {
+              "id": "import_com_sample_user_Address_java_lang",
+              "value": "java.lang",
+              "icon": "package"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "fullName": "com.sample.user.Address",
+        "packageName": "com.sample.user",
+        "sourceFile": "Address.java",
+        "isAbstract": false,
+        "isFinal": false
+      }
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "projectType": "java",
+    "projectName": "Java Project",
+    "convertedAt": "2025-04-07T22:53:32.688Z",
+    "originalFormat": {}
+  }
+}

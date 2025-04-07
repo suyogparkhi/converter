@@ -1,0 +1,1001 @@
+{
+  "metadata": {
+    "projectName": "djanger",
+    "totalApps": 4,
+    "totalModels": 4,
+    "totalViews": 21,
+    "analyzedAt": "2025-03-06T15:31:20.626188",
+    "django": {
+      "version": "5.1.2",
+      "debug": true
+    }
+  },
+  "apps": [
+    {
+      "name": "auth_test",
+      "path": "auth_test",
+      "is_project_app": true,
+      "note": "Found by directory structure, not in INSTALLED_APPS"
+    },
+    {
+      "name": "blog",
+      "path": "blog",
+      "is_project_app": true,
+      "note": "Found by directory structure, not in INSTALLED_APPS"
+    },
+    {
+      "name": "api",
+      "path": "api",
+      "is_project_app": true,
+      "note": "Found by directory structure, not in INSTALLED_APPS"
+    },
+    {
+      "name": "authsys",
+      "path": "authsys",
+      "is_project_app": true,
+      "note": "Found by directory structure, not in INSTALLED_APPS"
+    }
+  ],
+  "models": [
+    {
+      "name": "Tag",
+      "app": "blog",
+      "fields": [
+        {
+          "name": "name",
+          "type": "CharField",
+          "attributes": {
+            "max_length": 20
+          }
+        }
+      ],
+      "methods": [],
+      "meta": {},
+      "relationships": []
+    },
+    {
+      "name": "Post",
+      "app": "blog",
+      "fields": [
+        {
+          "name": "title",
+          "type": "CharField",
+          "attributes": {
+            "max_length": 50
+          }
+        },
+        {
+          "name": "content",
+          "type": "TextField",
+          "attributes": {}
+        },
+        {
+          "name": "user",
+          "type": "ForeignKey",
+          "attributes": {
+            "on_delete": "models.CASCADE",
+            "null": true
+          }
+        },
+        {
+          "name": "liked_by",
+          "type": "ManyToManyField",
+          "attributes": {
+            "related_name": "liked_posts",
+            "blank": true
+          }
+        },
+        {
+          "name": "disliked_by",
+          "type": "ManyToManyField",
+          "attributes": {
+            "related_name": "disliked_posts",
+            "blank": true
+          }
+        },
+        {
+          "name": "image",
+          "type": "ImageField",
+          "attributes": {
+            "blank": true
+          }
+        },
+        {
+          "name": "tags",
+          "type": "ManyToManyField",
+          "attributes": {}
+        },
+        {
+          "name": "created",
+          "type": "DateTimeField",
+          "attributes": {
+            "auto_now": true
+          }
+        },
+        {
+          "name": "updated",
+          "type": "DateTimeField",
+          "attributes": {
+            "auto_now": true
+          }
+        }
+      ],
+      "methods": [
+        {
+          "name": "__str__",
+          "parameters": []
+        }
+      ],
+      "meta": {},
+      "relationships": [
+        {
+          "field_name": "user",
+          "type": "ForeignKey",
+          "related_model": "User",
+          "related_name": null
+        },
+        {
+          "field_name": "liked_by",
+          "type": "ManyToManyField",
+          "related_model": "User",
+          "related_name": "liked_posts"
+        },
+        {
+          "field_name": "disliked_by",
+          "type": "ManyToManyField",
+          "related_model": "User",
+          "related_name": "disliked_posts"
+        },
+        {
+          "field_name": "tags",
+          "type": "ManyToManyField",
+          "related_model": "Tag",
+          "related_name": null
+        }
+      ]
+    },
+    {
+      "name": "Comment",
+      "app": "blog",
+      "fields": [
+        {
+          "name": "content",
+          "type": "CharField",
+          "attributes": {
+            "max_length": 200
+          }
+        },
+        {
+          "name": "post",
+          "type": "ForeignKey",
+          "attributes": {
+            "on_delete": "models.CASCADE",
+            "related_name": "comments"
+          }
+        },
+        {
+          "name": "user",
+          "type": "ForeignKey",
+          "attributes": {
+            "on_delete": "models.CASCADE"
+          }
+        }
+      ],
+      "methods": [
+        {
+          "name": "__str__",
+          "parameters": []
+        }
+      ],
+      "meta": {
+        "constraints": [
+          null
+        ]
+      },
+      "relationships": [
+        {
+          "field_name": "post",
+          "type": "ForeignKey",
+          "related_model": "Post",
+          "related_name": "comments"
+        },
+        {
+          "field_name": "user",
+          "type": "ForeignKey",
+          "related_model": "User",
+          "related_name": null
+        }
+      ]
+    },
+    {
+      "name": "Profile",
+      "app": "authsys",
+      "fields": [
+        {
+          "name": "user",
+          "type": "OneToOneField",
+          "attributes": {
+            "on_delete": "models.CASCADE"
+          }
+        },
+        {
+          "name": "bio",
+          "type": "TextField",
+          "attributes": {
+            "blank": true
+          }
+        }
+      ],
+      "methods": [
+        {
+          "name": "__str__",
+          "parameters": []
+        }
+      ],
+      "meta": {},
+      "relationships": [
+        {
+          "field_name": "user",
+          "type": "OneToOneField",
+          "related_model": "User",
+          "related_name": null
+        }
+      ]
+    }
+  ],
+  "views": [
+    {
+      "name": "index",
+      "app": "blog",
+      "type": "function",
+      "parameters": [
+        "request"
+      ],
+      "decorators": [],
+      "models_used": [
+        "Post"
+      ],
+      "template": "blog/index.html"
+    },
+    {
+      "name": "create_post",
+      "app": "blog",
+      "type": "function",
+      "parameters": [
+        "request"
+      ],
+      "decorators": [
+        "login_required"
+      ],
+      "models_used": [
+        "Tag"
+      ],
+      "template": "blog/newpost.html"
+    },
+    {
+      "name": "delete_post",
+      "app": "blog",
+      "type": "function",
+      "parameters": [
+        "request",
+        "post_id"
+      ],
+      "decorators": [
+        "login_required"
+      ],
+      "models_used": [
+        "Post"
+      ],
+      "template": null
+    },
+    {
+      "name": "update_post",
+      "app": "blog",
+      "type": "function",
+      "parameters": [
+        "request",
+        "post_id"
+      ],
+      "decorators": [
+        "login_required"
+      ],
+      "models_used": [
+        "Post"
+      ],
+      "template": "blog/updatepost.html"
+    },
+    {
+      "name": "SearchPost",
+      "app": "blog",
+      "type": "class",
+      "parent_views": [
+        "View"
+      ],
+      "methods": [
+        {
+          "name": "get",
+          "parameters": [
+            "request"
+          ]
+        }
+      ],
+      "models_used": [
+        "Post"
+      ],
+      "template": "blog/index.html"
+    },
+    {
+      "name": "detail",
+      "app": "blog",
+      "type": "function",
+      "parameters": [
+        "request",
+        "post_id"
+      ],
+      "decorators": [],
+      "models_used": [
+        "Post",
+        "Comment"
+      ],
+      "template": "blog/detail.html"
+    },
+    {
+      "name": "add_comment",
+      "app": "blog",
+      "type": "function",
+      "parameters": [
+        "request",
+        "post_id"
+      ],
+      "decorators": [
+        "login_required"
+      ],
+      "models_used": [
+        "Post",
+        "Comment"
+      ],
+      "template": null
+    },
+    {
+      "name": "like_post",
+      "app": "blog",
+      "type": "function",
+      "parameters": [
+        "request",
+        "post_id"
+      ],
+      "decorators": [
+        "login_required"
+      ],
+      "models_used": [
+        "Post"
+      ],
+      "template": null
+    },
+    {
+      "name": "dislike_post",
+      "app": "blog",
+      "type": "function",
+      "parameters": [
+        "request",
+        "post_id"
+      ],
+      "decorators": [
+        "login_required"
+      ],
+      "models_used": [
+        "Post"
+      ],
+      "template": null
+    },
+    {
+      "name": "user_profile",
+      "app": "blog",
+      "type": "function",
+      "parameters": [
+        "request",
+        "user_id"
+      ],
+      "decorators": [
+        "login_required"
+      ],
+      "models_used": [
+        "Post"
+      ],
+      "template": "blog/profile.html"
+    },
+    {
+      "name": "get",
+      "app": "blog",
+      "type": "function",
+      "parameters": [
+        "self",
+        "request"
+      ],
+      "decorators": [],
+      "models_used": [
+        "Post"
+      ],
+      "template": "blog/index.html"
+    },
+    {
+      "name": "items",
+      "app": "blog",
+      "type": "function",
+      "parameters": [
+        "self"
+      ],
+      "decorators": [],
+      "models_used": [
+        "Post"
+      ],
+      "template": null
+    },
+    {
+      "name": "item_title",
+      "app": "blog",
+      "type": "function",
+      "parameters": [
+        "self",
+        "item"
+      ],
+      "decorators": [],
+      "models_used": [],
+      "template": null
+    },
+    {
+      "name": "item_description",
+      "app": "blog",
+      "type": "function",
+      "parameters": [
+        "self",
+        "item"
+      ],
+      "decorators": [],
+      "models_used": [],
+      "template": null
+    },
+    {
+      "name": "item_link",
+      "app": "blog",
+      "type": "function",
+      "parameters": [
+        "self",
+        "item"
+      ],
+      "decorators": [],
+      "models_used": [],
+      "template": null
+    },
+    {
+      "name": "api_overview",
+      "app": "api",
+      "type": "function",
+      "parameters": [
+        "request"
+      ],
+      "decorators": [
+        "api_view"
+      ],
+      "models_used": [],
+      "template": null
+    },
+    {
+      "name": "list_blog",
+      "app": "api",
+      "type": "function",
+      "parameters": [
+        "request"
+      ],
+      "decorators": [
+        "api_view"
+      ],
+      "models_used": [
+        "Post"
+      ],
+      "template": null
+    },
+    {
+      "name": "blog_detail",
+      "app": "api",
+      "type": "function",
+      "parameters": [
+        "request",
+        "id"
+      ],
+      "decorators": [
+        "api_view"
+      ],
+      "models_used": [
+        "Post"
+      ],
+      "template": null
+    },
+    {
+      "name": "index",
+      "app": "authsys",
+      "type": "function",
+      "parameters": [
+        "request"
+      ],
+      "decorators": [],
+      "models_used": [],
+      "template": "authsys/index.html"
+    },
+    {
+      "name": "register_user",
+      "app": "authsys",
+      "type": "function",
+      "parameters": [
+        "request"
+      ],
+      "decorators": [],
+      "models_used": [],
+      "template": "authsys/register.html"
+    },
+    {
+      "name": "logout_user",
+      "app": "authsys",
+      "type": "function",
+      "parameters": [
+        "request"
+      ],
+      "decorators": [],
+      "models_used": [],
+      "template": null
+    }
+  ],
+  "urls": [
+    {
+      "app": "blog",
+      "path": "",
+      "view": "index",
+      "name": "index",
+      "include": null
+    },
+    {
+      "app": "blog",
+      "path": "create/",
+      "view": "create_post",
+      "name": "create",
+      "include": null
+    },
+    {
+      "app": "blog",
+      "path": "update/<int:post_id>",
+      "view": "update_post",
+      "name": "update",
+      "include": null
+    },
+    {
+      "app": "blog",
+      "path": "delete/<int:post_id>",
+      "view": "delete_post",
+      "name": "delete",
+      "include": null
+    },
+    {
+      "app": "blog",
+      "path": "search/",
+      "view": null,
+      "name": "search",
+      "include": null
+    },
+    {
+      "app": "blog",
+      "path": "post/<int:post_id>",
+      "view": "detail",
+      "name": "detail",
+      "include": null
+    },
+    {
+      "app": "blog",
+      "path": "comment/<int:post_id>",
+      "view": "add_comment",
+      "name": "comment",
+      "include": null
+    },
+    {
+      "app": "blog",
+      "path": "like/<int:post_id>",
+      "view": "like_post",
+      "name": "like",
+      "include": null
+    },
+    {
+      "app": "blog",
+      "path": "rss/feed",
+      "view": null,
+      "name": "latest_rss",
+      "include": null
+    },
+    {
+      "app": "blog",
+      "path": "dislike/<int:post_id>",
+      "view": "dislike_post",
+      "name": "dislike",
+      "include": null
+    },
+    {
+      "app": "blog",
+      "path": "<int:user_id>/profile",
+      "view": "user_profile",
+      "name": "profile",
+      "include": null
+    },
+    {
+      "app": "api",
+      "path": "",
+      "view": "api_overview",
+      "name": "overview",
+      "include": null
+    },
+    {
+      "app": "api",
+      "path": "blogs/",
+      "view": "list_blog",
+      "name": "blogs-list",
+      "include": null
+    },
+    {
+      "app": "api",
+      "path": "blogs/<int:id>",
+      "view": "blog_detail",
+      "name": "blog-detail",
+      "include": null
+    },
+    {
+      "app": "authsys",
+      "path": "",
+      "view": "index",
+      "name": "index",
+      "include": null
+    },
+    {
+      "app": "authsys",
+      "path": "register/",
+      "view": "register_user",
+      "name": "register",
+      "include": null
+    },
+    {
+      "app": "authsys",
+      "path": "logout/",
+      "view": "logout_user",
+      "name": "logout",
+      "include": null
+    }
+  ],
+  "forms": [],
+  "serializers": [
+    {
+      "name": "PostSerializer",
+      "app": "api",
+      "parent_serializers": [
+        "ModelSerializer"
+      ],
+      "fields": [],
+      "meta": {
+        "model": "Post",
+        "exclude": [
+          "created",
+          "updated"
+        ]
+      }
+    }
+  ],
+  "middleware": [
+    {
+      "name": "SecurityMiddleware",
+      "path": "django.middleware.security.SecurityMiddleware"
+    },
+    {
+      "name": "SessionMiddleware",
+      "path": "django.contrib.sessions.middleware.SessionMiddleware"
+    },
+    {
+      "name": "CommonMiddleware",
+      "path": "django.middleware.common.CommonMiddleware"
+    },
+    {
+      "name": "CsrfViewMiddleware",
+      "path": "django.middleware.csrf.CsrfViewMiddleware"
+    },
+    {
+      "name": "AuthenticationMiddleware",
+      "path": "django.contrib.auth.middleware.AuthenticationMiddleware"
+    },
+    {
+      "name": "MessageMiddleware",
+      "path": "django.contrib.messages.middleware.MessageMiddleware"
+    },
+    {
+      "name": "XFrameOptionsMiddleware",
+      "path": "django.middleware.clickjacking.XFrameOptionsMiddleware"
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "Post",
+      "source_app": "blog",
+      "target": "User",
+      "type": "model_relationship",
+      "relationship_type": "ForeignKey",
+      "field_name": "user"
+    },
+    {
+      "source": "Post",
+      "source_app": "blog",
+      "target": "User",
+      "type": "model_relationship",
+      "relationship_type": "ManyToManyField",
+      "field_name": "liked_by"
+    },
+    {
+      "source": "Post",
+      "source_app": "blog",
+      "target": "User",
+      "type": "model_relationship",
+      "relationship_type": "ManyToManyField",
+      "field_name": "disliked_by"
+    },
+    {
+      "source": "Post",
+      "source_app": "blog",
+      "target": "Tag",
+      "type": "model_relationship",
+      "relationship_type": "ManyToManyField",
+      "field_name": "tags"
+    },
+    {
+      "source": "Comment",
+      "source_app": "blog",
+      "target": "Post",
+      "type": "model_relationship",
+      "relationship_type": "ForeignKey",
+      "field_name": "post"
+    },
+    {
+      "source": "Comment",
+      "source_app": "blog",
+      "target": "User",
+      "type": "model_relationship",
+      "relationship_type": "ForeignKey",
+      "field_name": "user"
+    },
+    {
+      "source": "Profile",
+      "source_app": "authsys",
+      "target": "User",
+      "type": "model_relationship",
+      "relationship_type": "OneToOneField",
+      "field_name": "user"
+    },
+    {
+      "source": "index",
+      "source_app": "blog",
+      "target": "Post",
+      "type": "view_uses_model"
+    },
+    {
+      "source": "create_post",
+      "source_app": "blog",
+      "target": "Tag",
+      "type": "view_uses_model"
+    },
+    {
+      "source": "delete_post",
+      "source_app": "blog",
+      "target": "Post",
+      "type": "view_uses_model"
+    },
+    {
+      "source": "update_post",
+      "source_app": "blog",
+      "target": "Post",
+      "type": "view_uses_model"
+    },
+    {
+      "source": "SearchPost",
+      "source_app": "blog",
+      "target": "Post",
+      "type": "view_uses_model"
+    },
+    {
+      "source": "detail",
+      "source_app": "blog",
+      "target": "Post",
+      "type": "view_uses_model"
+    },
+    {
+      "source": "detail",
+      "source_app": "blog",
+      "target": "Comment",
+      "type": "view_uses_model"
+    },
+    {
+      "source": "add_comment",
+      "source_app": "blog",
+      "target": "Post",
+      "type": "view_uses_model"
+    },
+    {
+      "source": "add_comment",
+      "source_app": "blog",
+      "target": "Comment",
+      "type": "view_uses_model"
+    },
+    {
+      "source": "like_post",
+      "source_app": "blog",
+      "target": "Post",
+      "type": "view_uses_model"
+    },
+    {
+      "source": "dislike_post",
+      "source_app": "blog",
+      "target": "Post",
+      "type": "view_uses_model"
+    },
+    {
+      "source": "user_profile",
+      "source_app": "blog",
+      "target": "Post",
+      "type": "view_uses_model"
+    },
+    {
+      "source": "get",
+      "source_app": "blog",
+      "target": "Post",
+      "type": "view_uses_model"
+    },
+    {
+      "source": "items",
+      "source_app": "blog",
+      "target": "Post",
+      "type": "view_uses_model"
+    },
+    {
+      "source": "list_blog",
+      "source_app": "api",
+      "target": "Post",
+      "type": "view_uses_model"
+    },
+    {
+      "source": "blog_detail",
+      "source_app": "api",
+      "target": "Post",
+      "type": "view_uses_model"
+    },
+    {
+      "source": "",
+      "source_app": "blog",
+      "target": "index",
+      "type": "url_maps_to_view",
+      "url_name": "index"
+    },
+    {
+      "source": "create/",
+      "source_app": "blog",
+      "target": "create_post",
+      "type": "url_maps_to_view",
+      "url_name": "create"
+    },
+    {
+      "source": "update/<int:post_id>",
+      "source_app": "blog",
+      "target": "update_post",
+      "type": "url_maps_to_view",
+      "url_name": "update"
+    },
+    {
+      "source": "delete/<int:post_id>",
+      "source_app": "blog",
+      "target": "delete_post",
+      "type": "url_maps_to_view",
+      "url_name": "delete"
+    },
+    {
+      "source": "post/<int:post_id>",
+      "source_app": "blog",
+      "target": "detail",
+      "type": "url_maps_to_view",
+      "url_name": "detail"
+    },
+    {
+      "source": "comment/<int:post_id>",
+      "source_app": "blog",
+      "target": "add_comment",
+      "type": "url_maps_to_view",
+      "url_name": "comment"
+    },
+    {
+      "source": "like/<int:post_id>",
+      "source_app": "blog",
+      "target": "like_post",
+      "type": "url_maps_to_view",
+      "url_name": "like"
+    },
+    {
+      "source": "dislike/<int:post_id>",
+      "source_app": "blog",
+      "target": "dislike_post",
+      "type": "url_maps_to_view",
+      "url_name": "dislike"
+    },
+    {
+      "source": "<int:user_id>/profile",
+      "source_app": "blog",
+      "target": "user_profile",
+      "type": "url_maps_to_view",
+      "url_name": "profile"
+    },
+    {
+      "source": "",
+      "source_app": "api",
+      "target": "api_overview",
+      "type": "url_maps_to_view",
+      "url_name": "overview"
+    },
+    {
+      "source": "blogs/",
+      "source_app": "api",
+      "target": "list_blog",
+      "type": "url_maps_to_view",
+      "url_name": "blogs-list"
+    },
+    {
+      "source": "blogs/<int:id>",
+      "source_app": "api",
+      "target": "blog_detail",
+      "type": "url_maps_to_view",
+      "url_name": "blog-detail"
+    },
+    {
+      "source": "",
+      "source_app": "authsys",
+      "target": "index",
+      "type": "url_maps_to_view",
+      "url_name": "index"
+    },
+    {
+      "source": "register/",
+      "source_app": "authsys",
+      "target": "register_user",
+      "type": "url_maps_to_view",
+      "url_name": "register"
+    },
+    {
+      "source": "logout/",
+      "source_app": "authsys",
+      "target": "logout_user",
+      "type": "url_maps_to_view",
+      "url_name": "logout"
+    },
+    {
+      "source": "PostSerializer",
+      "source_app": "api",
+      "target": "Post",
+      "type": "serializer_uses_model"
+    }
+  ],
+  "settings": {
+    "databases": {
+      "default": {
+        "engine": "django.db.backends.sqlite3"
+      }
+    },
+    "static_url": "static/",
+    "media_url": "/media/",
+    "templates": [
+      {
+        "backend": "django.template.backends.django.DjangoTemplates",
+        "dirs": []
+      }
+    ]
+  },
+  "errors": {
+    "parsing": [],
+    "validation": []
+  }
+}

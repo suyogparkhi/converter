@@ -1,0 +1,23 @@
+{
+  "name": "standard_converter",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "convert": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Standard converter for dependency graphs",
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "^5.8.3"
+  }
+}

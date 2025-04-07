@@ -1,0 +1,1881 @@
+{
+  "name" : "com",
+  "elements" : [ {
+    "name" : ".sample",
+    "elements" : [ {
+      "name" : ".book",
+      "elements" : [ {
+        "superClassName" : "com.sample.book.Book",
+        "interfaces" : [ ],
+        "packageName" : "com.sample.book",
+        "sourceFile" : "TextBook.java",
+        "signature" : "default",
+        "fields" : [ {
+          "name" : "subject",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "edition",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "usedInCourses",
+          "type" : "java.util.List<com.sample.book.Course>",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        } ],
+        "methods" : [ {
+          "accessModifier" : "PUBLIC",
+          "name" : "<init>",
+          "parameters" : [ "java.lang.String", "java.lang.String", "java.lang.String", "int", "java.lang.String", "java.lang.String", "java.lang.String" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "calculateLateFee",
+          "parameters" : [ "int" ],
+          "returnType" : "double",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "addCourseReference",
+          "parameters" : [ "com.sample.book.Course" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "isCurrentEdition",
+          "parameters" : [ ],
+          "returnType" : "boolean",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "generateBookOrder",
+          "parameters" : [ "int" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        } ],
+        "outGoingDependencies" : [ "com.sample.book.Course" ],
+        "incomingDependencies" : [ "com.sample.user.Faculty", "com.sample.book.Course" ],
+        "final" : false,
+        "class" : true,
+        "interface" : false,
+        "elements" : [ ],
+        "importedPackages" : [ {
+          "name" : "java.lang",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "java.util",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        } ],
+        "name" : "com.sample.book.TextBook",
+        "abstract" : false,
+        "package" : false
+      }, {
+        "superClassName" : "java.lang.Object",
+        "interfaces" : [ ],
+        "packageName" : "com.sample.book",
+        "sourceFile" : "BookReview.java",
+        "signature" : "default",
+        "fields" : [ {
+          "name" : "reviewId",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "reviewer",
+          "type" : "com.sample.user.User",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "book",
+          "type" : "com.sample.book.Book",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "content",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "rating",
+          "type" : "int",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        } ],
+        "methods" : [ {
+          "accessModifier" : "PUBLIC",
+          "name" : "<init>",
+          "parameters" : [ "java.lang.String", "com.sample.user.User", "com.sample.book.Book", "java.lang.String", "int" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "updateReview",
+          "parameters" : [ "java.lang.String", "int" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "isValidRating",
+          "parameters" : [ ],
+          "returnType" : "boolean",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "formatReview",
+          "parameters" : [ ],
+          "returnType" : "java.lang.String",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        } ],
+        "outGoingDependencies" : [ "com.sample.user.User", "com.sample.book.Book" ],
+        "incomingDependencies" : [ "com.sample.book.Book" ],
+        "final" : false,
+        "class" : true,
+        "interface" : false,
+        "elements" : [ ],
+        "importedPackages" : [ {
+          "name" : "java.lang",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "com.sample.user",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        } ],
+        "name" : "com.sample.book.BookReview",
+        "abstract" : false,
+        "package" : false
+      }, {
+        "superClassName" : "java.lang.Object",
+        "interfaces" : [ ],
+        "packageName" : "com.sample.book",
+        "sourceFile" : "Department.java",
+        "signature" : "default",
+        "fields" : [ {
+          "name" : "departmentId",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "name",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "head",
+          "type" : "com.sample.user.Faculty",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "courses",
+          "type" : "java.util.List<com.sample.book.Course>",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        } ],
+        "methods" : [ {
+          "accessModifier" : "PUBLIC",
+          "name" : "<init>",
+          "parameters" : [ "java.lang.String", "java.lang.String" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "assignDepartmentHead",
+          "parameters" : [ "com.sample.user.Faculty" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "addCourse",
+          "parameters" : [ "com.sample.book.Course" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "getAllFacultyMembers",
+          "parameters" : [ ],
+          "returnType" : "java.util.List<com.sample.user.Faculty>",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "generateDepartmentReport",
+          "parameters" : [ ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        } ],
+        "outGoingDependencies" : [ "com.sample.user.Faculty", "com.sample.book.Course" ],
+        "incomingDependencies" : [ "com.sample.user.Student", "com.sample.user.Faculty" ],
+        "final" : false,
+        "class" : true,
+        "interface" : false,
+        "elements" : [ ],
+        "importedPackages" : [ {
+          "name" : "java.lang",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "java.util",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "com.sample.user",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        } ],
+        "name" : "com.sample.book.Department",
+        "abstract" : false,
+        "package" : false
+      }, {
+        "superClassName" : "java.lang.Object",
+        "interfaces" : [ ],
+        "packageName" : "com.sample.book",
+        "sourceFile" : "LibraryItem.java",
+        "signature" : "default",
+        "fields" : [ {
+          "name" : "itemId",
+          "type" : "java.lang.String",
+          "modifier" : "PROTECTED",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "title",
+          "type" : "java.lang.String",
+          "modifier" : "PROTECTED",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "publisher",
+          "type" : "java.lang.String",
+          "modifier" : "PROTECTED",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "year",
+          "type" : "int",
+          "modifier" : "PROTECTED",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "status",
+          "type" : "com.sample.book.ItemStatus",
+          "modifier" : "PROTECTED",
+          "final" : false,
+          "static" : false
+        } ],
+        "methods" : [ {
+          "accessModifier" : "PUBLIC",
+          "name" : "<init>",
+          "parameters" : [ "java.lang.String", "java.lang.String", "java.lang.String", "int" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "updateStatus",
+          "parameters" : [ "com.sample.book.ItemStatus" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "isAvailable",
+          "parameters" : [ ],
+          "returnType" : "boolean",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "generateItemBarcode",
+          "parameters" : [ ],
+          "returnType" : "java.lang.String",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "calculateLateFee",
+          "parameters" : [ "int" ],
+          "returnType" : "double",
+          "final" : false,
+          "static" : false,
+          "abstract" : true
+        } ],
+        "outGoingDependencies" : [ "com.sample.book.ItemStatus" ],
+        "incomingDependencies" : [ "com.sample.Library", "com.sample.loan.Loan" ],
+        "final" : false,
+        "class" : true,
+        "interface" : false,
+        "elements" : [ ],
+        "importedPackages" : [ {
+          "name" : "java.lang",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "java.lang.invoke",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        } ],
+        "name" : "com.sample.book.LibraryItem",
+        "abstract" : true,
+        "package" : false
+      }, {
+        "superClassName" : "java.lang.Enum",
+        "interfaces" : [ ],
+        "packageName" : "com.sample.book",
+        "sourceFile" : "ItemStatus.java",
+        "signature" : "Ljava/lang/Enum<Lcom/sample/book/ItemStatus;>;",
+        "fields" : [ {
+          "name" : "AVAILABLE",
+          "type" : "com.sample.book.ItemStatus",
+          "modifier" : "PUBLIC",
+          "final" : true,
+          "static" : true
+        }, {
+          "name" : "BORROWED",
+          "type" : "com.sample.book.ItemStatus",
+          "modifier" : "PUBLIC",
+          "final" : true,
+          "static" : true
+        }, {
+          "name" : "RESERVED",
+          "type" : "com.sample.book.ItemStatus",
+          "modifier" : "PUBLIC",
+          "final" : true,
+          "static" : true
+        }, {
+          "name" : "MAINTENANCE",
+          "type" : "com.sample.book.ItemStatus",
+          "modifier" : "PUBLIC",
+          "final" : true,
+          "static" : true
+        }, {
+          "name" : "ENUM$VALUES",
+          "type" : "com.sample.book.ItemStatus[]",
+          "modifier" : "PRIVATE",
+          "final" : true,
+          "static" : true
+        } ],
+        "methods" : [ {
+          "accessModifier" : "DEFAULT",
+          "name" : "<clinit>",
+          "parameters" : [ ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : true,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PRIVATE",
+          "name" : "<init>",
+          "parameters" : [ "java.lang.String", "int" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "values",
+          "parameters" : [ ],
+          "returnType" : "com.sample.book.ItemStatus[]",
+          "final" : false,
+          "static" : true,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "valueOf",
+          "parameters" : [ "java.lang.String" ],
+          "returnType" : "com.sample.book.ItemStatus",
+          "final" : false,
+          "static" : true,
+          "abstract" : false
+        } ],
+        "outGoingDependencies" : [ ],
+        "incomingDependencies" : [ "com.sample.book.LibraryItem" ],
+        "final" : true,
+        "class" : true,
+        "interface" : false,
+        "elements" : [ ],
+        "importedPackages" : [ {
+          "name" : "java.lang",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        } ],
+        "name" : "com.sample.book.ItemStatus",
+        "abstract" : false,
+        "package" : false
+      }, {
+        "superClassName" : "java.lang.Object",
+        "interfaces" : [ ],
+        "packageName" : "com.sample.book",
+        "sourceFile" : "Course.java",
+        "signature" : "default",
+        "fields" : [ {
+          "name" : "courseId",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "name",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "instructor",
+          "type" : "com.sample.user.Faculty",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "requiredBooks",
+          "type" : "java.util.List<com.sample.book.TextBook>",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        } ],
+        "methods" : [ {
+          "accessModifier" : "PUBLIC",
+          "name" : "<init>",
+          "parameters" : [ "java.lang.String", "java.lang.String", "com.sample.user.Faculty" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "addRequiredBook",
+          "parameters" : [ "com.sample.book.TextBook" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "updateInstructor",
+          "parameters" : [ "com.sample.user.Faculty" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "getEnrolledStudents",
+          "parameters" : [ ],
+          "returnType" : "java.util.List<com.sample.user.Student>",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "generateSyllabus",
+          "parameters" : [ ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        } ],
+        "outGoingDependencies" : [ "com.sample.book.TextBook", "com.sample.user.Student", "com.sample.user.Faculty" ],
+        "incomingDependencies" : [ "com.sample.book.TextBook", "com.sample.book.Department", "com.sample.user.Student", "com.sample.user.Faculty" ],
+        "final" : false,
+        "class" : true,
+        "interface" : false,
+        "elements" : [ ],
+        "importedPackages" : [ {
+          "name" : "java.lang",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "java.util",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "com.sample.user",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        } ],
+        "name" : "com.sample.book.Course",
+        "abstract" : false,
+        "package" : false
+      }, {
+        "superClassName" : "com.sample.book.LibraryItem",
+        "interfaces" : [ ],
+        "packageName" : "com.sample.book",
+        "sourceFile" : "Book.java",
+        "signature" : "default",
+        "fields" : [ {
+          "name" : "author",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "isbn",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "reviews",
+          "type" : "java.util.List<com.sample.book.BookReview>",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        } ],
+        "methods" : [ {
+          "accessModifier" : "PUBLIC",
+          "name" : "<init>",
+          "parameters" : [ "java.lang.String", "java.lang.String", "java.lang.String", "int", "java.lang.String" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "calculateLateFee",
+          "parameters" : [ "int" ],
+          "returnType" : "double",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "addReview",
+          "parameters" : [ "com.sample.book.BookReview" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "getAverageRating",
+          "parameters" : [ ],
+          "returnType" : "double",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "generateCatalogEntry",
+          "parameters" : [ ],
+          "returnType" : "java.lang.String",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        } ],
+        "outGoingDependencies" : [ "com.sample.book.BookReview" ],
+        "incomingDependencies" : [ "com.sample.book.BookReview", "com.sample.user.Student", "com.sample.user.Faculty" ],
+        "final" : false,
+        "class" : true,
+        "interface" : false,
+        "elements" : [ ],
+        "importedPackages" : [ {
+          "name" : "java.lang",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "java.util",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        } ],
+        "name" : "com.sample.book.Book",
+        "abstract" : false,
+        "package" : false
+      } ],
+      "class" : false,
+      "classCount" : 7,
+      "concreteClassCount" : 6,
+      "abstractClassCount" : 1,
+      "package" : true
+    }, {
+      "superClassName" : "java.lang.Object",
+      "interfaces" : [ ],
+      "packageName" : "com.sample",
+      "sourceFile" : "Library.java",
+      "signature" : "default",
+      "fields" : [ {
+        "name" : "name",
+        "type" : "java.lang.String",
+        "modifier" : "PRIVATE",
+        "final" : false,
+        "static" : false
+      }, {
+        "name" : "address",
+        "type" : "com.sample.user.Address",
+        "modifier" : "PRIVATE",
+        "final" : false,
+        "static" : false
+      }, {
+        "name" : "items",
+        "type" : "java.util.List<com.sample.book.LibraryItem>",
+        "modifier" : "PRIVATE",
+        "final" : false,
+        "static" : false
+      }, {
+        "name" : "users",
+        "type" : "java.util.List<com.sample.user.User>",
+        "modifier" : "PRIVATE",
+        "final" : false,
+        "static" : false
+      }, {
+        "name" : "activeLoans",
+        "type" : "java.util.List<com.sample.loan.Loan>",
+        "modifier" : "PRIVATE",
+        "final" : false,
+        "static" : false
+      }, {
+        "name" : "outstandingFines",
+        "type" : "java.util.List<com.sample.fine.Fine>",
+        "modifier" : "PRIVATE",
+        "final" : false,
+        "static" : false
+      } ],
+      "methods" : [ {
+        "accessModifier" : "PUBLIC",
+        "name" : "<init>",
+        "parameters" : [ "java.lang.String", "com.sample.user.Address" ],
+        "returnType" : "void",
+        "final" : false,
+        "static" : false,
+        "abstract" : false
+      }, {
+        "accessModifier" : "PUBLIC",
+        "name" : "addNewItem",
+        "parameters" : [ "com.sample.book.LibraryItem" ],
+        "returnType" : "void",
+        "final" : false,
+        "static" : false,
+        "abstract" : false
+      }, {
+        "accessModifier" : "PUBLIC",
+        "name" : "registerUser",
+        "parameters" : [ "com.sample.user.User" ],
+        "returnType" : "void",
+        "final" : false,
+        "static" : false,
+        "abstract" : false
+      }, {
+        "accessModifier" : "PUBLIC",
+        "name" : "createLoan",
+        "parameters" : [ "com.sample.user.User", "com.sample.book.LibraryItem" ],
+        "returnType" : "com.sample.loan.Loan",
+        "final" : false,
+        "static" : false,
+        "abstract" : false
+      }, {
+        "accessModifier" : "PUBLIC",
+        "name" : "processReturn",
+        "parameters" : [ "com.sample.loan.Loan" ],
+        "returnType" : "void",
+        "final" : false,
+        "static" : false,
+        "abstract" : false
+      }, {
+        "accessModifier" : "PRIVATE",
+        "name" : "generateLoanId",
+        "parameters" : [ ],
+        "returnType" : "java.lang.String",
+        "final" : false,
+        "static" : false,
+        "abstract" : false
+      }, {
+        "accessModifier" : "PRIVATE",
+        "name" : "generateFineId",
+        "parameters" : [ ],
+        "returnType" : "java.lang.String",
+        "final" : false,
+        "static" : false,
+        "abstract" : false
+      }, {
+        "accessModifier" : "PUBLIC",
+        "name" : "searchCatalog",
+        "parameters" : [ "java.lang.String" ],
+        "returnType" : "java.util.List<com.sample.book.LibraryItem>",
+        "final" : false,
+        "static" : false,
+        "abstract" : false
+      }, {
+        "accessModifier" : "PUBLIC",
+        "name" : "generateDailyReport",
+        "parameters" : [ ],
+        "returnType" : "void",
+        "final" : false,
+        "static" : false,
+        "abstract" : false
+      }, {
+        "accessModifier" : "PUBLIC",
+        "name" : "sendOverdueNotifications",
+        "parameters" : [ ],
+        "returnType" : "void",
+        "final" : false,
+        "static" : false,
+        "abstract" : false
+      } ],
+      "outGoingDependencies" : [ "com.sample.fine.Fine", "com.sample.book.LibraryItem", "com.sample.loan.Loan", "com.sample.user.User", "com.sample.user.Address" ],
+      "incomingDependencies" : [ ],
+      "final" : false,
+      "class" : true,
+      "interface" : false,
+      "elements" : [ ],
+      "importedPackages" : [ {
+        "name" : "com.sample.book",
+        "elements" : [ ],
+        "class" : false,
+        "classCount" : 0,
+        "concreteClassCount" : 0,
+        "abstractClassCount" : 0,
+        "package" : true
+      }, {
+        "name" : "com.sample.loan",
+        "elements" : [ ],
+        "class" : false,
+        "classCount" : 0,
+        "concreteClassCount" : 0,
+        "abstractClassCount" : 0,
+        "package" : true
+      }, {
+        "name" : "java.lang",
+        "elements" : [ ],
+        "class" : false,
+        "classCount" : 0,
+        "concreteClassCount" : 0,
+        "abstractClassCount" : 0,
+        "package" : true
+      }, {
+        "name" : "java.util",
+        "elements" : [ ],
+        "class" : false,
+        "classCount" : 0,
+        "concreteClassCount" : 0,
+        "abstractClassCount" : 0,
+        "package" : true
+      }, {
+        "name" : "com.sample.fine",
+        "elements" : [ ],
+        "class" : false,
+        "classCount" : 0,
+        "concreteClassCount" : 0,
+        "abstractClassCount" : 0,
+        "package" : true
+      }, {
+        "name" : "com.sample.user",
+        "elements" : [ ],
+        "class" : false,
+        "classCount" : 0,
+        "concreteClassCount" : 0,
+        "abstractClassCount" : 0,
+        "package" : true
+      }, {
+        "name" : "java.lang.invoke",
+        "elements" : [ ],
+        "class" : false,
+        "classCount" : 0,
+        "concreteClassCount" : 0,
+        "abstractClassCount" : 0,
+        "package" : true
+      } ],
+      "name" : "com.sample.Library",
+      "abstract" : false,
+      "package" : false
+    }, {
+      "name" : ".loan",
+      "elements" : [ {
+        "superClassName" : "java.lang.Enum",
+        "interfaces" : [ ],
+        "packageName" : "com.sample.loan",
+        "sourceFile" : "LoanStatus.java",
+        "signature" : "Ljava/lang/Enum<Lcom/sample/loan/LoanStatus;>;",
+        "fields" : [ {
+          "name" : "ACTIVE",
+          "type" : "com.sample.loan.LoanStatus",
+          "modifier" : "PUBLIC",
+          "final" : true,
+          "static" : true
+        }, {
+          "name" : "RETURNED",
+          "type" : "com.sample.loan.LoanStatus",
+          "modifier" : "PUBLIC",
+          "final" : true,
+          "static" : true
+        }, {
+          "name" : "OVERDUE",
+          "type" : "com.sample.loan.LoanStatus",
+          "modifier" : "PUBLIC",
+          "final" : true,
+          "static" : true
+        }, {
+          "name" : "ENUM$VALUES",
+          "type" : "com.sample.loan.LoanStatus[]",
+          "modifier" : "PRIVATE",
+          "final" : true,
+          "static" : true
+        } ],
+        "methods" : [ {
+          "accessModifier" : "DEFAULT",
+          "name" : "<clinit>",
+          "parameters" : [ ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : true,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PRIVATE",
+          "name" : "<init>",
+          "parameters" : [ "java.lang.String", "int" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "values",
+          "parameters" : [ ],
+          "returnType" : "com.sample.loan.LoanStatus[]",
+          "final" : false,
+          "static" : true,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "valueOf",
+          "parameters" : [ "java.lang.String" ],
+          "returnType" : "com.sample.loan.LoanStatus",
+          "final" : false,
+          "static" : true,
+          "abstract" : false
+        } ],
+        "outGoingDependencies" : [ ],
+        "incomingDependencies" : [ ],
+        "final" : true,
+        "class" : true,
+        "interface" : false,
+        "elements" : [ ],
+        "importedPackages" : [ {
+          "name" : "java.lang",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        } ],
+        "name" : "com.sample.loan.LoanStatus",
+        "abstract" : false,
+        "package" : false
+      }, {
+        "superClassName" : "java.lang.Object",
+        "interfaces" : [ ],
+        "packageName" : "com.sample.loan",
+        "sourceFile" : "Loan.java",
+        "signature" : "default",
+        "fields" : [ {
+          "name" : "loanId",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "borrower",
+          "type" : "com.sample.user.User",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "item",
+          "type" : "com.sample.book.LibraryItem",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "borrowDate",
+          "type" : "java.time.LocalDate",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "dueDate",
+          "type" : "java.time.LocalDate",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "status",
+          "type" : "com.sample.loan.LoanStatus",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        } ],
+        "methods" : [ {
+          "accessModifier" : "PUBLIC",
+          "name" : "<init>",
+          "parameters" : [ "java.lang.String", "com.sample.user.User", "com.sample.book.LibraryItem" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "extendLoan",
+          "parameters" : [ "int" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "isOverdue",
+          "parameters" : [ ],
+          "returnType" : "boolean",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "returnItem",
+          "parameters" : [ ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "calculateOverdueFee",
+          "parameters" : [ ],
+          "returnType" : "double",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        } ],
+        "outGoingDependencies" : [ "com.sample.loan.LoanStatus", "com.sample.book.LibraryItem", "com.sample.user.User" ],
+        "incomingDependencies" : [ "com.sample.Library", "com.sample.fine.Fine" ],
+        "final" : false,
+        "class" : true,
+        "interface" : false,
+        "elements" : [ ],
+        "importedPackages" : [ {
+          "name" : "com.sample.book",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "java.lang",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "java.time",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "com.sample.user",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "java.time.temporal",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        } ],
+        "name" : "com.sample.loan.Loan",
+        "abstract" : false,
+        "package" : false
+      } ],
+      "class" : false,
+      "classCount" : 2,
+      "concreteClassCount" : 2,
+      "abstractClassCount" : 0,
+      "package" : true
+    }, {
+      "name" : ".fine",
+      "elements" : [ {
+        "superClassName" : "java.lang.Object",
+        "interfaces" : [ ],
+        "packageName" : "com.sample.fine",
+        "sourceFile" : "Fine.java",
+        "signature" : "default",
+        "fields" : [ {
+          "name" : "fineId",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "loan",
+          "type" : "com.sample.loan.Loan",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "amount",
+          "type" : "double",
+          "modifier" : "DEFAULT",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "isPaid",
+          "type" : "boolean",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "issueDate",
+          "type" : "java.time.LocalDate",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "payment",
+          "type" : "com.sample.fine.Payment",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        } ],
+        "methods" : [ {
+          "accessModifier" : "PUBLIC",
+          "name" : "<init>",
+          "parameters" : [ "java.lang.String", "com.sample.loan.Loan", "double" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "processPayment",
+          "parameters" : [ "com.sample.fine.Payment" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "calculateLateFee",
+          "parameters" : [ ],
+          "returnType" : "double",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "sendReminderNotification",
+          "parameters" : [ ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        } ],
+        "outGoingDependencies" : [ "com.sample.loan.Loan", "com.sample.fine.Payment" ],
+        "incomingDependencies" : [ "com.sample.Library", "com.sample.fine.Payment" ],
+        "final" : false,
+        "class" : true,
+        "interface" : false,
+        "elements" : [ ],
+        "importedPackages" : [ {
+          "name" : "com.sample.loan",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "java.lang",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "java.time",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        } ],
+        "name" : "com.sample.fine.Fine",
+        "abstract" : false,
+        "package" : false
+      }, {
+        "superClassName" : "java.lang.Enum",
+        "interfaces" : [ ],
+        "packageName" : "com.sample.fine",
+        "sourceFile" : "PaymentMethod.java",
+        "signature" : "Ljava/lang/Enum<Lcom/sample/fine/PaymentMethod;>;",
+        "fields" : [ {
+          "name" : "CASH",
+          "type" : "com.sample.fine.PaymentMethod",
+          "modifier" : "PUBLIC",
+          "final" : true,
+          "static" : true
+        }, {
+          "name" : "CREDIT_CARD",
+          "type" : "com.sample.fine.PaymentMethod",
+          "modifier" : "PUBLIC",
+          "final" : true,
+          "static" : true
+        }, {
+          "name" : "DEBIT_CARD",
+          "type" : "com.sample.fine.PaymentMethod",
+          "modifier" : "PUBLIC",
+          "final" : true,
+          "static" : true
+        }, {
+          "name" : "ONLINE_TRANSFER",
+          "type" : "com.sample.fine.PaymentMethod",
+          "modifier" : "PUBLIC",
+          "final" : true,
+          "static" : true
+        }, {
+          "name" : "ENUM$VALUES",
+          "type" : "com.sample.fine.PaymentMethod[]",
+          "modifier" : "PRIVATE",
+          "final" : true,
+          "static" : true
+        } ],
+        "methods" : [ {
+          "accessModifier" : "DEFAULT",
+          "name" : "<clinit>",
+          "parameters" : [ ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : true,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PRIVATE",
+          "name" : "<init>",
+          "parameters" : [ "java.lang.String", "int" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "values",
+          "parameters" : [ ],
+          "returnType" : "com.sample.fine.PaymentMethod[]",
+          "final" : false,
+          "static" : true,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "valueOf",
+          "parameters" : [ "java.lang.String" ],
+          "returnType" : "com.sample.fine.PaymentMethod",
+          "final" : false,
+          "static" : true,
+          "abstract" : false
+        } ],
+        "outGoingDependencies" : [ ],
+        "incomingDependencies" : [ "com.sample.fine.Payment" ],
+        "final" : true,
+        "class" : true,
+        "interface" : false,
+        "elements" : [ ],
+        "importedPackages" : [ {
+          "name" : "java.lang",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        } ],
+        "name" : "com.sample.fine.PaymentMethod",
+        "abstract" : false,
+        "package" : false
+      }, {
+        "superClassName" : "java.lang.Object",
+        "interfaces" : [ ],
+        "packageName" : "com.sample.fine",
+        "sourceFile" : "Payment.java",
+        "signature" : "default",
+        "fields" : [ {
+          "name" : "paymentId",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "fine",
+          "type" : "com.sample.fine.Fine",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "amount",
+          "type" : "double",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "paymentDate",
+          "type" : "java.time.LocalDateTime",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "method",
+          "type" : "com.sample.fine.PaymentMethod",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        } ],
+        "methods" : [ {
+          "accessModifier" : "PUBLIC",
+          "name" : "<init>",
+          "parameters" : [ "java.lang.String", "com.sample.fine.Fine", "double" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "validatePayment",
+          "parameters" : [ ],
+          "returnType" : "boolean",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "generateReceipt",
+          "parameters" : [ ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "recordTransaction",
+          "parameters" : [ ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "processRefund",
+          "parameters" : [ ],
+          "returnType" : "boolean",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        } ],
+        "outGoingDependencies" : [ "com.sample.fine.Fine", "com.sample.fine.PaymentMethod" ],
+        "incomingDependencies" : [ "com.sample.fine.Fine" ],
+        "final" : false,
+        "class" : true,
+        "interface" : false,
+        "elements" : [ ],
+        "importedPackages" : [ {
+          "name" : "java.lang",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "java.time",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        } ],
+        "name" : "com.sample.fine.Payment",
+        "abstract" : false,
+        "package" : false
+      } ],
+      "class" : false,
+      "classCount" : 3,
+      "concreteClassCount" : 3,
+      "abstractClassCount" : 0,
+      "package" : true
+    }, {
+      "superClassName" : "java.lang.Object",
+      "interfaces" : [ ],
+      "packageName" : "com.sample",
+      "sourceFile" : "Main.java",
+      "signature" : "default",
+      "fields" : [ ],
+      "methods" : [ {
+        "accessModifier" : "PUBLIC",
+        "name" : "<init>",
+        "parameters" : [ ],
+        "returnType" : "void",
+        "final" : false,
+        "static" : false,
+        "abstract" : false
+      }, {
+        "accessModifier" : "PUBLIC",
+        "name" : "main",
+        "parameters" : [ "java.lang.String[]" ],
+        "returnType" : "void",
+        "final" : false,
+        "static" : true,
+        "abstract" : false
+      } ],
+      "outGoingDependencies" : [ ],
+      "incomingDependencies" : [ ],
+      "final" : false,
+      "class" : true,
+      "interface" : false,
+      "elements" : [ ],
+      "importedPackages" : [ {
+        "name" : "java.lang",
+        "elements" : [ ],
+        "class" : false,
+        "classCount" : 0,
+        "concreteClassCount" : 0,
+        "abstractClassCount" : 0,
+        "package" : true
+      }, {
+        "name" : "java.io",
+        "elements" : [ ],
+        "class" : false,
+        "classCount" : 0,
+        "concreteClassCount" : 0,
+        "abstractClassCount" : 0,
+        "package" : true
+      } ],
+      "name" : "com.sample.Main",
+      "abstract" : false,
+      "package" : false
+    }, {
+      "name" : ".user",
+      "elements" : [ {
+        "superClassName" : "com.sample.user.User",
+        "interfaces" : [ ],
+        "packageName" : "com.sample.user",
+        "sourceFile" : "Student.java",
+        "signature" : "default",
+        "fields" : [ {
+          "name" : "studentId",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "department",
+          "type" : "com.sample.book.Department",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        } ],
+        "methods" : [ {
+          "accessModifier" : "PUBLIC",
+          "name" : "<init>",
+          "parameters" : [ "java.lang.String", "java.lang.String", "java.lang.String", "com.sample.user.Address", "java.lang.String", "com.sample.book.Department" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "canBorrowBooks",
+          "parameters" : [ ],
+          "returnType" : "boolean",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "getCheckedOutBooks",
+          "parameters" : [ ],
+          "returnType" : "java.util.List<com.sample.book.Book>",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "isEligibleForNewLoan",
+          "parameters" : [ ],
+          "returnType" : "boolean",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "enrollInCourse",
+          "parameters" : [ "com.sample.book.Course" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "generateStudentLibraryCard",
+          "parameters" : [ ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        } ],
+        "outGoingDependencies" : [ "com.sample.book.Department", "com.sample.book.Course", "com.sample.book.Book", "com.sample.user.Address" ],
+        "incomingDependencies" : [ "com.sample.user.Faculty" ],
+        "final" : false,
+        "class" : true,
+        "interface" : false,
+        "elements" : [ ],
+        "importedPackages" : [ {
+          "name" : "com.sample.book",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "java.lang",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "java.util",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        } ],
+        "name" : "com.sample.user.Student",
+        "abstract" : false,
+        "package" : false
+      }, {
+        "superClassName" : "com.sample.user.User",
+        "interfaces" : [ ],
+        "packageName" : "com.sample.user",
+        "sourceFile" : "Faculty.java",
+        "signature" : "default",
+        "fields" : [ {
+          "name" : "facultyId",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "department",
+          "type" : "com.sample.book.Department",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "courses",
+          "type" : "java.util.List<com.sample.book.Course>",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        } ],
+        "methods" : [ {
+          "accessModifier" : "PUBLIC",
+          "name" : "<init>",
+          "parameters" : [ "java.lang.String", "java.lang.String", "java.lang.String", "com.sample.user.Address", "java.lang.String", "com.sample.book.Department" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "canBorrowBooks",
+          "parameters" : [ ],
+          "returnType" : "boolean",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "assignCourse",
+          "parameters" : [ "com.sample.book.Course" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "getRequestedTextBooks",
+          "parameters" : [ ],
+          "returnType" : "java.util.List<com.sample.book.TextBook>",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "submitBookRequest",
+          "parameters" : [ "com.sample.book.Book" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "getEnrolledStudents",
+          "parameters" : [ ],
+          "returnType" : "java.util.List<com.sample.user.Student>",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        } ],
+        "outGoingDependencies" : [ "com.sample.book.TextBook", "com.sample.book.Department", "com.sample.user.Student", "com.sample.book.Course", "com.sample.book.Book", "com.sample.user.Address" ],
+        "incomingDependencies" : [ ],
+        "final" : false,
+        "class" : true,
+        "interface" : false,
+        "elements" : [ ],
+        "importedPackages" : [ {
+          "name" : "com.sample.book",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "java.lang",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        }, {
+          "name" : "java.util",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        } ],
+        "name" : "com.sample.user.Faculty",
+        "abstract" : false,
+        "package" : false
+      }, {
+        "superClassName" : "java.lang.Object",
+        "interfaces" : [ ],
+        "packageName" : "com.sample.user",
+        "sourceFile" : "User.java",
+        "signature" : "default",
+        "fields" : [ {
+          "name" : "id",
+          "type" : "java.lang.String",
+          "modifier" : "PROTECTED",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "name",
+          "type" : "java.lang.String",
+          "modifier" : "PUBLIC",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "email",
+          "type" : "java.lang.String",
+          "modifier" : "PROTECTED",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "address",
+          "type" : "com.sample.user.Address",
+          "modifier" : "PROTECTED",
+          "final" : false,
+          "static" : false
+        } ],
+        "methods" : [ {
+          "accessModifier" : "PUBLIC",
+          "name" : "<init>",
+          "parameters" : [ "java.lang.String", "java.lang.String", "java.lang.String", "com.sample.user.Address" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "generateUserReport",
+          "parameters" : [ ],
+          "returnType" : "java.lang.String",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "updateContactInfo",
+          "parameters" : [ "java.lang.String", "com.sample.user.Address" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "validateUserCredentials",
+          "parameters" : [ "java.lang.String", "java.lang.String" ],
+          "returnType" : "boolean",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "getName",
+          "parameters" : [ ],
+          "returnType" : "java.lang.String",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "canBorrowBooks",
+          "parameters" : [ ],
+          "returnType" : "boolean",
+          "final" : false,
+          "static" : false,
+          "abstract" : true
+        } ],
+        "outGoingDependencies" : [ "com.sample.user.Address" ],
+        "incomingDependencies" : [ ],
+        "final" : false,
+        "class" : true,
+        "interface" : false,
+        "elements" : [ ],
+        "importedPackages" : [ {
+          "name" : "java.lang",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        } ],
+        "name" : "com.sample.user.User",
+        "abstract" : true,
+        "package" : false
+      }, {
+        "superClassName" : "java.lang.Object",
+        "interfaces" : [ ],
+        "packageName" : "com.sample.user",
+        "sourceFile" : "Address.java",
+        "signature" : "default",
+        "fields" : [ {
+          "name" : "street",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "city",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "state",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        }, {
+          "name" : "zipCode",
+          "type" : "java.lang.String",
+          "modifier" : "PRIVATE",
+          "final" : false,
+          "static" : false
+        } ],
+        "methods" : [ {
+          "accessModifier" : "PUBLIC",
+          "name" : "<init>",
+          "parameters" : [ "java.lang.String", "java.lang.String", "java.lang.String", "java.lang.String" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "getFormattedAddress",
+          "parameters" : [ ],
+          "returnType" : "java.lang.String",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "isValidZipCode",
+          "parameters" : [ ],
+          "returnType" : "boolean",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        }, {
+          "accessModifier" : "PUBLIC",
+          "name" : "updateAddress",
+          "parameters" : [ "java.lang.String", "java.lang.String", "java.lang.String", "java.lang.String" ],
+          "returnType" : "void",
+          "final" : false,
+          "static" : false,
+          "abstract" : false
+        } ],
+        "outGoingDependencies" : [ ],
+        "incomingDependencies" : [ "com.sample.user.Student", "com.sample.user.Faculty", "com.sample.user.User" ],
+        "final" : false,
+        "class" : true,
+        "interface" : false,
+        "elements" : [ ],
+        "importedPackages" : [ {
+          "name" : "java.lang",
+          "elements" : [ ],
+          "class" : false,
+          "classCount" : 0,
+          "concreteClassCount" : 0,
+          "abstractClassCount" : 0,
+          "package" : true
+        } ],
+        "name" : "com.sample.user.Address",
+        "abstract" : false,
+        "package" : false
+      } ],
+      "class" : false,
+      "classCount" : 4,
+      "concreteClassCount" : 3,
+      "abstractClassCount" : 1,
+      "package" : true
+    } ],
+    "class" : false,
+    "classCount" : 2,
+    "concreteClassCount" : 2,
+    "abstractClassCount" : 0,
+    "package" : true
+  } ],
+  "class" : false,
+  "classCount" : 0,
+  "concreteClassCount" : 0,
+  "abstractClassCount" : 0,
+  "package" : true
+}

@@ -9,7 +9,12 @@ import { convertDjangoDependencies } from './django-converter';
  * Detect the type of dependency data based on file content
  */
 function detectDependencyType(data: any): 'typescript' | 'java' | 'django' | 'unknown' {
-  // Check for TypeScript dependencies
+  // Check for React TypeScript component-based dependencies (new format)
+  if (!Array.isArray(data) && data.components && typeof data.components === 'object') {
+    return 'typescript';
+  }
+  
+  // Check for TypeScript dependencies (legacy format)
   if (Array.isArray(data) && data.length > 0 && data[0].fileName && data[0].exports) {
     return 'typescript';
   }

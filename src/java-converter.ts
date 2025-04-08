@@ -55,12 +55,12 @@ interface JavaPackage {
 export function convertJavaDependencies(javaDependencies: JavaPackage): Graph {
   const nodes: Node[] = [];
   const edges: Edge[] = [];
-  const nodeMap = new Map<string, string>(); // Maps class names to node IDs
+  const nodeMap = new Map<string, string>();
   
-  // Process Java classes and create nodes
+  // Process the Java package structure
   processJavaPackage(javaDependencies, nodes, nodeMap);
   
-  // Create edges between classes
+  // Create edges based on node relationships
   createJavaEdges(nodes, edges, nodeMap);
   
   return {
@@ -223,7 +223,11 @@ function createJavaClassNode(
       packageName: javaClass.packageName,
       sourceFile: javaClass.sourceFile,
       isAbstract: javaClass.abstract,
-      isFinal: javaClass.final
+      isFinal: javaClass.final,
+      superClassName: javaClass.superClassName,
+      interfaces: javaClass.interfaces,
+      outGoingDependencies: javaClass.outGoingDependencies,
+      incomingDependencies: javaClass.incomingDependencies
     }
   });
 }

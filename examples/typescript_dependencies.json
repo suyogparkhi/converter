@@ -1,1803 +1,2920 @@
-[
-  {
-    "fileName": "extension.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/extension.ts",
-    "exports": {
-      "components": [],
-      "functions": [
+{
+  "components": {
+    "Home": {
+      "name": "Home",
+      "filePath": "app/page.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "RootLayout": {
+      "name": "RootLayout",
+      "filePath": "app/layout.tsx",
+      "props": [
         {
-          "name": "activate",
-          "isExported": true,
-          "params": [
-            {
-              "name": "context",
-              "type": "import(\"vscode\").ExtensionContext",
-              "isRequired": true
-            }
-          ],
-          "returnType": "void",
-          "usedInFiles": []
+          "name": "children",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "ThemeToggle": {
+      "name": "ThemeToggle",
+      "filePath": "components/theme-toggle.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [
+        {
+          "type": "useTheme",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": []
+    },
+    "AuthProvider": {
+      "name": "AuthProvider",
+      "filePath": "context/AuthContext.tsx",
+      "props": [
+        {
+          "name": "children",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [
+        {
+          "name": "authState",
+          "type": "object",
+          "initialValue": "{}"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useRouter",
+          "customHook": true
         },
         {
-          "name": "deactivate",
-          "isExported": true,
-          "params": [],
-          "returnType": "void",
-          "usedInFiles": []
-        }
-      ],
-      "interfaces": [],
-      "types": [],
-      "classes": [],
-      "variables": []
-    },
-    "imports": [
-      {
-        "name": "vscode",
-        "path": "vscode",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "path",
-        "path": "path",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "fs",
-        "path": "fs",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "selectRootFolder",
-        "path": "./projectTypes/selectFolder",
-        "namedImports": [
-          "selectRootFolder"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\projectTypes\\selectFolder"
-      },
-      {
-        "name": "runJavaParser",
-        "path": "./parser/javaParser",
-        "namedImports": [
-          "runJavaParser"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\parser\\javaParser"
-      },
-      {
-        "name": "registerWebViewProvider",
-        "path": "./views/sidebar/register-sidebar",
-        "namedImports": [
-          "registerWebViewProvider"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\sidebar\\register-sidebar"
-      },
-      {
-        "name": "JavaPackageTreeProvider",
-        "path": "./views/tree/javaPackageTreeProvider",
-        "namedImports": [
-          "JavaPackageTreeProvider"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\javaPackageTreeProvider"
-      },
-      {
-        "name": "ClassStructureProvider",
-        "path": "./views/tree/classStructure",
-        "namedImports": [
-          "ClassStructureProvider"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\classStructure"
-      },
-      {
-        "name": "PackageTreeProvider",
-        "path": "./views/tree/packageTree",
-        "namedImports": [
-          "PackageTreeProvider"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\packageTree"
-      },
-      {
-        "name": "Element",
-        "path": "./views/tree/tokens/root",
-        "namedImports": [
-          "Element",
-          "Field",
-          "Method"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
-      },
-      {
-        "name": "showGraph",
-        "path": "./graphGeneration.ts/showGraph",
-        "namedImports": [],
-        "defaultImport": "showGraph",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\graphGeneration.ts\\showGraph"
-      },
-      {
-        "name": "ElementItem",
-        "path": "./views/tree/item",
-        "namedImports": [
-          "ElementItem"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\item"
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [
-      "D:\\Dependency-Analysis-Extension\\src\\projectTypes\\selectFolder",
-      "D:\\Dependency-Analysis-Extension\\src\\parser\\javaParser",
-      "D:\\Dependency-Analysis-Extension\\src\\views\\sidebar\\register-sidebar",
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\javaPackageTreeProvider",
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\classStructure",
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\packageTree",
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root",
-      "D:\\Dependency-Analysis-Extension\\src\\graphGeneration.ts\\showGraph",
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\item"
-    ],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "listClasses.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/graphGeneration.ts/listClasses.ts",
-    "exports": {
-      "components": [],
-      "functions": [
-        {
-          "name": "findElementsWithClassName",
-          "isExported": true,
-          "params": [
-            {
-              "name": "element",
-              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element",
-              "isRequired": true
-            }
-          ],
-          "returnType": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element[]",
-          "usedInFiles": []
-        }
-      ],
-      "interfaces": [],
-      "types": [],
-      "classes": [],
-      "variables": []
-    },
-    "imports": [
-      {
-        "name": "fs",
-        "path": "fs",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "path",
-        "path": "path",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "Element",
-        "path": "../views/tree/tokens/root",
-        "namedImports": [
-          "Element"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
-    ],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "mermaid.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/graphGeneration.ts/mermaid.ts",
-    "exports": {
-      "components": [],
-      "functions": [
-        {
-          "name": "generateClassDiagram",
-          "isExported": true,
-          "params": [
-            {
-              "name": "initialClass",
-              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element",
-              "isRequired": true
-            },
-            {
-              "name": "itemsList",
-              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element[]",
-              "isRequired": true
-            }
-          ],
-          "returnType": "string",
-          "usedInFiles": []
+          "type": "useState",
+          "customHook": false
         },
         {
-          "name": "generateClassDefinition",
-          "isExported": false,
-          "params": [
-            {
-              "name": "classData",
-              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element",
-              "isRequired": true
-            }
-          ],
-          "returnType": "string",
-          "usedInFiles": []
+          "type": "useDepartment",
+          "customHook": true
         },
         {
-          "name": "generateRelationships",
-          "isExported": false,
-          "params": [
-            {
-              "name": "classData",
-              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element",
-              "isRequired": true
-            },
-            {
-              "name": "itemsList",
-              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element[]",
-              "isRequired": true
-            },
-            {
-              "name": "processedRelations",
-              "type": "Set<string>",
-              "isRequired": true
-            }
-          ],
-          "returnType": "string",
-          "usedInFiles": []
+          "type": "useEffect",
+          "customHook": false,
+          "dependencies": []
         },
         {
-          "name": "cleanClassName",
-          "isExported": false,
-          "params": [
-            {
-              "name": "fullName",
-              "type": "string",
-              "isRequired": true
-            }
-          ],
-          "returnType": "string",
-          "usedInFiles": []
-        },
-        {
-          "name": "cleanTypeName",
-          "isExported": false,
-          "params": [
-            {
-              "name": "type",
-              "type": "string",
-              "isRequired": true
-            }
-          ],
-          "returnType": "string",
-          "usedInFiles": []
-        },
-        {
-          "name": "formatParameters",
-          "isExported": false,
-          "params": [
-            {
-              "name": "params",
-              "type": "string[]",
-              "isRequired": true
-            }
-          ],
-          "returnType": "string",
-          "usedInFiles": []
-        },
-        {
-          "name": "formatAccessModifier",
-          "isExported": false,
-          "params": [
-            {
-              "name": "modifier",
-              "type": "string",
-              "isRequired": true
-            }
-          ],
-          "returnType": "string",
-          "usedInFiles": []
+          "type": "useContext",
+          "customHook": false
         }
       ],
-      "interfaces": [],
-      "types": [],
-      "classes": [],
-      "variables": []
+      "dependencies": [],
+      "children": []
     },
-    "imports": [
-      {
-        "name": "Element",
-        "path": "../views/tree/tokens/root",
-        "namedImports": [
-          "Element"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
-    ],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "showGraph.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/graphGeneration.ts/showGraph.ts",
-    "exports": {
-      "components": [],
-      "functions": [
+    "MainLayout": {
+      "name": "MainLayout",
+      "filePath": "app/(main)/layout.tsx",
+      "props": [
         {
-          "name": "showGraph",
-          "isExported": true,
-          "params": [
-            {
-              "name": "context",
-              "type": "import(\"vscode\").ExtensionContext",
-              "isRequired": true
-            },
-            {
-              "name": "item",
-              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element",
-              "isRequired": true
-            }
-          ],
-          "returnType": "Promise<void>",
-          "usedInFiles": []
+          "name": "children",
+          "type": "any",
+          "required": true
         }
       ],
-      "interfaces": [],
-      "types": [],
-      "classes": [],
-      "variables": []
-    },
-    "imports": [
-      {
-        "name": "vscode",
-        "path": "vscode",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "fs",
-        "path": "fs",
-        "namedImports": [],
-        "defaultImport": "fs",
-        "isTypeOnly": false
-      },
-      {
-        "name": "path",
-        "path": "path",
-        "namedImports": [],
-        "defaultImport": "path",
-        "isTypeOnly": false
-      },
-      {
-        "name": "Element",
-        "path": "../views/tree/tokens/root",
-        "namedImports": [
-          "Element"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
-      },
-      {
-        "name": "findElementsWithClassName",
-        "path": "./listClasses",
-        "namedImports": [],
-        "defaultImport": "findElementsWithClassName",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\graphGeneration.ts\\listClasses"
-      },
-      {
-        "name": "generateClassDiagram",
-        "path": "./mermaid",
-        "namedImports": [],
-        "defaultImport": "generateClassDiagram",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\graphGeneration.ts\\mermaid"
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root",
-      "D:\\Dependency-Analysis-Extension\\src\\graphGeneration.ts\\listClasses",
-      "D:\\Dependency-Analysis-Extension\\src\\graphGeneration.ts\\mermaid"
-    ],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "javaParser.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/parser/javaParser.ts",
-    "exports": {
-      "components": [],
-      "functions": [
-        {
-          "name": "runJavaParser",
-          "isExported": true,
-          "params": [
-            {
-              "name": "workspaceFolder",
-              "type": "string",
-              "isRequired": true
-            },
-            {
-              "name": "type",
-              "type": "string",
-              "isRequired": true
-            }
-          ],
-          "returnType": "Promise<void>",
-          "usedInFiles": []
-        }
-      ],
-      "interfaces": [],
-      "types": [],
-      "classes": [],
-      "variables": []
-    },
-    "imports": [
-      {
-        "name": "vscode",
-        "path": "vscode",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "child_process",
-        "path": "child_process",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "path",
-        "path": "path",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "fs",
-        "path": "fs",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "projectDetector.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/projectTypes/projectDetector.ts",
-    "exports": {
-      "components": [],
-      "functions": [
-        {
-          "name": "projectDetector",
-          "isExported": true,
-          "params": [
-            {
-              "name": "rootFolder",
-              "type": "string",
-              "isRequired": true
-            },
-            {
-              "name": "projectConfig",
-              "type": "ProjectConfig",
-              "isRequired": true
-            }
-          ],
-          "returnType": "void",
-          "usedInFiles": []
-        }
-      ],
-      "interfaces": [
-        {
-          "name": "ProjectTypeConfig",
-          "isExported": false,
-          "properties": [
-            {
-              "name": "requiredFiles",
-              "type": "string[]",
-              "isRequired": true
-            },
-            {
-              "name": "matchAny",
-              "type": "boolean",
-              "isRequired": false
-            }
-          ],
-          "usedInFiles": []
-        },
-        {
-          "name": "ProjectConfig",
-          "isExported": false,
-          "properties": [],
-          "usedInFiles": []
-        }
-      ],
-      "types": [],
-      "classes": [],
-      "variables": []
-    },
-    "imports": [
-      {
-        "name": "fs",
-        "path": "fs",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "path",
-        "path": "path",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "vscode",
-        "path": "vscode",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "selectFolder.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/projectTypes/selectFolder.ts",
-    "exports": {
-      "components": [],
-      "functions": [
-        {
-          "name": "selectRootFolder",
-          "isExported": true,
-          "params": [],
-          "returnType": "Promise<void>",
-          "usedInFiles": []
-        }
-      ],
-      "interfaces": [],
-      "types": [],
-      "classes": [],
-      "variables": []
-    },
-    "imports": [
-      {
-        "name": "vscode",
-        "path": "vscode",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "fs",
-        "path": "fs",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "path",
-        "path": "path",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "projectDetector",
-        "path": "./projectDetector",
-        "namedImports": [
-          "projectDetector"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\projectTypes\\projectDetector"
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [
-      "D:\\Dependency-Analysis-Extension\\src\\projectTypes\\projectDetector"
-    ],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "extension.test.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/test/extension.test.ts",
-    "exports": {
-      "components": [],
-      "functions": [],
-      "interfaces": [],
-      "types": [],
-      "classes": [],
-      "variables": []
-    },
-    "imports": [
-      {
-        "name": "assert",
-        "path": "assert",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "vscode",
-        "path": "vscode",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "register-sidebar.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/views/sidebar/register-sidebar.ts",
-    "exports": {
-      "components": [],
-      "functions": [
-        {
-          "name": "registerWebViewProvider",
-          "isExported": true,
-          "params": [
-            {
-              "name": "context",
-              "type": "import(\"vscode\").ExtensionContext",
-              "isRequired": true
-            },
-            {
-              "name": "op",
-              "type": "import(\"vscode\").OutputChannel",
-              "isRequired": true
-            }
-          ],
-          "returnType": "import(\"D:/Dependency-Analysis-Extension/src/views/sidebar/register-sidebar\").SidebarWebViewProvider",
-          "usedInFiles": []
-        }
-      ],
-      "interfaces": [],
-      "types": [],
-      "classes": [
-        {
-          "name": "SidebarWebViewProvider",
-          "isExported": true,
-          "methods": [
-            {
-              "name": "resolveWebviewView",
-              "params": [
-                {
-                  "name": "webviewView",
-                  "type": "import(\"vscode\").WebviewView",
-                  "isRequired": true
-                },
-                {
-                  "name": "webViewContext",
-                  "type": "import(\"vscode\").WebviewViewResolveContext<unknown>",
-                  "isRequired": true
-                },
-                {
-                  "name": "token",
-                  "type": "import(\"vscode\").CancellationToken",
-                  "isRequired": true
-                }
-              ],
-              "returnType": "void"
-            },
-            {
-              "name": "_getHtmlForWebview",
-              "params": [
-                {
-                  "name": "webview",
-                  "type": "import(\"vscode\").Webview",
-                  "isRequired": true
-                }
-              ],
-              "returnType": "string"
-            }
-          ],
-          "properties": [
-            {
-              "name": "view",
-              "type": "import(\"vscode\").WebviewView",
-              "isRequired": false
-            }
-          ],
-          "usedInFiles": []
-        }
-      ],
-      "variables": []
-    },
-    "imports": [
-      {
-        "name": "CancellationToken",
-        "path": "vscode",
-        "namedImports": [
-          "CancellationToken",
-          "commands",
-          "ExtensionContext",
-          "OutputChannel",
-          "Uri",
-          "Webview",
-          "WebviewView",
-          "WebviewViewProvider",
-          "WebviewViewResolveContext",
-          "window"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "path",
-        "path": "path",
-        "namedImports": [],
-        "defaultImport": "path",
-        "isTypeOnly": false
-      },
-      {
-        "name": "fs",
-        "path": "fs",
-        "namedImports": [],
-        "defaultImport": "fs",
-        "isTypeOnly": false
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "classStructure.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/classStructure.ts",
-    "exports": {
-      "components": [],
-      "functions": [],
-      "interfaces": [],
-      "types": [],
-      "classes": [
-        {
-          "name": "ClassStructureProvider",
-          "isExported": true,
-          "methods": [
-            {
-              "name": "refresh",
-              "params": [
-                {
-                  "name": "element",
-                  "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element",
-                  "isRequired": true
-                }
-              ],
-              "returnType": "void"
-            },
-            {
-              "name": "getTreeItem",
-              "params": [
-                {
-                  "name": "element",
-                  "type": "StructureTreeItem<import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Field | import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Method>",
-                  "isRequired": true
-                }
-              ],
-              "returnType": "import(\"vscode\").TreeItem | Thenable<import(\"vscode\").TreeItem>"
-            },
-            {
-              "name": "getChildren",
-              "params": [
-                {
-                  "name": "element",
-                  "type": "StructureTreeItem<import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Field | import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Method>",
-                  "isRequired": false
-                }
-              ],
-              "returnType": "import(\"vscode\").ProviderResult<StructureTreeItem<import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Field | import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Method>[]>"
-            }
-          ],
-          "properties": [
-            {
-              "name": "_onDidChangeTreeData",
-              "type": "import(\"vscode\").EventEmitter<void | StructureTreeItem<import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Field | import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Method>>",
-              "isRequired": true
-            },
-            {
-              "name": "currentElement",
-              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element",
-              "isRequired": true
-            },
-            {
-              "name": "onDidChangeTreeData",
-              "type": "import(\"vscode\").Event<void | StructureTreeItem<import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Field | import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Method> | StructureTreeItem<import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Field | import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Method>[]>",
-              "isRequired": false
-            }
-          ],
-          "usedInFiles": []
-        },
-        {
-          "name": "StructureTreeItem",
-          "isExported": false,
-          "methods": [
-            {
-              "name": "getLabel",
-              "params": [
-                {
-                  "name": "className",
-                  "type": "string",
-                  "isRequired": true
-                },
-                {
-                  "name": "item",
-                  "type": "T",
-                  "isRequired": true
-                },
-                {
-                  "name": "type",
-                  "type": "\"field\" | \"method\"",
-                  "isRequired": true
-                }
-              ],
-              "returnType": "string"
-            },
-            {
-              "name": "getTooltip",
-              "params": [
-                {
-                  "name": "item",
-                  "type": "T",
-                  "isRequired": true
-                },
-                {
-                  "name": "type",
-                  "type": "\"field\" | \"method\"",
-                  "isRequired": true
-                }
-              ],
-              "returnType": "string"
-            },
-            {
-              "name": "getIconPath",
-              "params": [
-                {
-                  "name": "item",
-                  "type": "T",
-                  "isRequired": true
-                },
-                {
-                  "name": "type",
-                  "type": "\"field\" | \"method\"",
-                  "isRequired": true
-                }
-              ],
-              "returnType": "{ light: string; dark: string; }"
-            }
-          ],
-          "properties": [],
-          "usedInFiles": []
-        }
-      ],
-      "variables": [
-        {
-          "name": "formatName",
-          "isExported": true,
-          "type": "(str: string) => string",
-          "usedInFiles": []
-        }
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": [
+        "AuthProvider"
       ]
     },
-    "imports": [
-      {
-        "name": "vscode",
-        "path": "vscode",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "fs",
-        "path": "fs",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "path",
-        "path": "path",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "Element",
-        "path": "./tokens/root",
-        "namedImports": [
-          "Element",
-          "Field",
-          "Method",
-          "Root"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
-    ],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "item.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/item.ts",
-    "exports": {
-      "components": [],
-      "functions": [],
-      "interfaces": [],
-      "types": [],
-      "classes": [
+    "Toaster": {
+      "name": "Toaster",
+      "filePath": "components/ui/sonner.tsx",
+      "props": [
         {
-          "name": "ElementItem",
-          "isExported": true,
-          "methods": [
-            {
-              "name": "getChildren",
-              "params": [],
-              "returnType": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/item\").ElementItem[]"
-            }
-          ],
-          "properties": [],
-          "usedInFiles": []
+          "name": "props",
+          "type": "ToasterProps",
+          "required": true
         }
       ],
-      "variables": []
-    },
-    "imports": [
-      {
-        "name": "vscode",
-        "path": "vscode",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "Element",
-        "path": "./tokens/root",
-        "namedImports": [
-          "Element"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
-      },
-      {
-        "name": "formatName",
-        "path": "./classStructure",
-        "namedImports": [
-          "formatName"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\classStructure"
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root",
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\classStructure"
-    ],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "javaPackageTreeProvider.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/javaPackageTreeProvider.ts",
-    "exports": {
-      "components": [],
-      "functions": [],
-      "interfaces": [],
-      "types": [],
-      "classes": [
+      "state": [],
+      "hooks": [
         {
-          "name": "JavaPackageTreeProvider",
-          "isExported": true,
-          "methods": [
-            {
-              "name": "getTreeItem",
-              "params": [
-                {
-                  "name": "element",
-                  "type": "JavaElement",
-                  "isRequired": true
-                }
-              ],
-              "returnType": "import(\"vscode\").TreeItem | Thenable<import(\"vscode\").TreeItem>"
-            },
-            {
-              "name": "getChildren",
-              "params": [
-                {
-                  "name": "element",
-                  "type": "JavaElement",
-                  "isRequired": false
-                }
-              ],
-              "returnType": "import(\"vscode\").ProviderResult<JavaElement[]>"
-            },
-            {
-              "name": "getDepsInPackageJson",
-              "params": [
-                {
-                  "name": "packageJsonPath",
-                  "type": "string",
-                  "isRequired": true
-                }
-              ],
-              "returnType": "JavaElement[]"
-            },
-            {
-              "name": "pathExists",
-              "params": [
-                {
-                  "name": "p",
-                  "type": "string",
-                  "isRequired": true
-                }
-              ],
-              "returnType": "boolean"
-            }
-          ],
-          "properties": [
-            {
-              "name": "onDidChangeTreeData",
-              "type": "import(\"vscode\").Event<void | JavaElement | JavaElement[]>",
-              "isRequired": false
-            }
-          ],
-          "usedInFiles": []
+          "type": "useTheme",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": []
+    },
+    "Skeleton": {
+      "name": "Skeleton",
+      "filePath": "components/ui/skeleton.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
         },
         {
-          "name": "JavaElement",
-          "isExported": false,
-          "methods": [],
-          "properties": [],
-          "usedInFiles": []
+          "name": "className",
+          "type": "any",
+          "required": true
         }
       ],
-      "variables": []
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
     },
-    "imports": [
-      {
-        "name": "vscode",
-        "path": "vscode",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "fs",
-        "path": "fs",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "path",
-        "path": "path",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "Element",
-        "path": "./tokens/root",
-        "namedImports": [
-          "Element",
-          "Field",
-          "Method",
-          "Root"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
-    ],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "packageTree.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/packageTree.ts",
-    "exports": {
-      "components": [],
-      "functions": [],
-      "interfaces": [],
-      "types": [],
-      "classes": [
+    "SheetHeader": {
+      "name": "SheetHeader",
+      "filePath": "components/ui/sheet.tsx",
+      "props": [
         {
-          "name": "PackageTreeProvider",
-          "isExported": true,
-          "methods": [
-            {
-              "name": "refresh",
-              "params": [],
-              "returnType": "void"
-            },
-            {
-              "name": "getTreeItem",
-              "params": [
-                {
-                  "name": "element",
-                  "type": "ElementItem",
-                  "isRequired": true
-                }
-              ],
-              "returnType": "import(\"vscode\").TreeItem | Thenable<import(\"vscode\").TreeItem>"
-            },
-            {
-              "name": "getChildren",
-              "params": [
-                {
-                  "name": "element",
-                  "type": "ElementItem",
-                  "isRequired": false
-                }
-              ],
-              "returnType": "import(\"vscode\").ProviderResult<ElementItem[]>"
-            }
-          ],
-          "properties": [
-            {
-              "name": "_onDidChangeTreeData",
-              "type": "import(\"vscode\").EventEmitter<void | ElementItem>",
-              "isRequired": true
-            },
-            {
-              "name": "jsonPath",
-              "type": "string",
-              "isRequired": true
-            },
-            {
-              "name": "currentElement",
-              "type": "ElementItem",
-              "isRequired": true
-            },
-            {
-              "name": "onDidChangeTreeData",
-              "type": "import(\"vscode\").Event<void | ElementItem | ElementItem[]>",
-              "isRequired": false
-            }
-          ],
-          "usedInFiles": []
+          "name": "props",
+          "required": true
         },
         {
-          "name": "ElementItem",
-          "isExported": false,
-          "methods": [
-            {
-              "name": "getChildren",
-              "params": [],
-              "returnType": "ElementItem[]"
-            }
-          ],
-          "properties": [],
-          "usedInFiles": []
+          "name": "className",
+          "type": "any",
+          "required": true
         }
       ],
-      "variables": []
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
     },
-    "imports": [
-      {
-        "name": "vscode",
-        "path": "vscode",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "fs",
-        "path": "fs",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "path",
-        "path": "path",
-        "namedImports": [],
-        "defaultImport": "",
-        "isTypeOnly": false
-      },
-      {
-        "name": "Element",
-        "path": "./tokens/root",
-        "namedImports": [
-          "Element",
-          "Field",
-          "Method",
-          "Root"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root"
-      },
-      {
-        "name": "formatName",
-        "path": "./classStructure",
-        "namedImports": [
-          "formatName"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\classStructure"
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\root",
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\classStructure"
-    ],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "base.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/tokens/items/base.ts",
-    "exports": {
-      "components": [],
-      "functions": [],
-      "interfaces": [],
-      "types": [],
-      "classes": [
+    "SheetFooter": {
+      "name": "SheetFooter",
+      "filePath": "components/ui/sheet.tsx",
+      "props": [
         {
-          "name": "BaseItem",
-          "isExported": true,
-          "methods": [],
-          "properties": [
-            {
-              "name": "tooltip",
-              "type": "string",
-              "isRequired": false
-            }
-          ],
-          "usedInFiles": []
-        }
-      ],
-      "variables": []
-    },
-    "imports": [
-      {
-        "name": "MarkdownString",
-        "path": "vscode",
-        "namedImports": [
-          "MarkdownString",
-          "Range",
-          "TreeItem",
-          "TreeItemCollapsibleState"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "class.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/tokens/items/class.ts",
-    "exports": {
-      "components": [],
-      "functions": [],
-      "interfaces": [],
-      "types": [],
-      "classes": [
-        {
-          "name": "ClassItem",
-          "isExported": true,
-          "methods": [],
-          "properties": [
-            {
-              "name": "contextValue",
-              "type": "string",
-              "isRequired": false
-            }
-          ],
-          "usedInFiles": []
-        }
-      ],
-      "variables": []
-    },
-    "imports": [
-      {
-        "name": "BaseItem",
-        "path": "./base",
-        "namedImports": [
-          "BaseItem"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\items\\base"
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\items\\base"
-    ],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "field.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/tokens/items/field.ts",
-    "exports": {
-      "components": [],
-      "functions": [],
-      "interfaces": [],
-      "types": [],
-      "classes": [
-        {
-          "name": "FieldItem",
-          "isExported": true,
-          "methods": [],
-          "properties": [
-            {
-              "name": "contextValue",
-              "type": "string",
-              "isRequired": false
-            }
-          ],
-          "usedInFiles": []
-        }
-      ],
-      "variables": []
-    },
-    "imports": [
-      {
-        "name": "BaseItem",
-        "path": "./base",
-        "namedImports": [
-          "BaseItem"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\items\\base"
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\items\\base"
-    ],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "index.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/tokens/items/index.ts",
-    "exports": {
-      "components": [],
-      "functions": [],
-      "interfaces": [],
-      "types": [],
-      "classes": [],
-      "variables": []
-    },
-    "imports": [],
-    "incomingDependencies": [],
-    "outgoingDependencies": [],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "method.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/tokens/items/method.ts",
-    "exports": {
-      "components": [],
-      "functions": [],
-      "interfaces": [],
-      "types": [],
-      "classes": [
-        {
-          "name": "MethodItem",
-          "isExported": true,
-          "methods": [],
-          "properties": [
-            {
-              "name": "contextValue",
-              "type": "string",
-              "isRequired": false
-            }
-          ],
-          "usedInFiles": []
-        }
-      ],
-      "variables": []
-    },
-    "imports": [
-      {
-        "name": "BaseItem",
-        "path": "./base",
-        "namedImports": [
-          "BaseItem"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false,
-        "resolvedFilePath": "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\items\\base"
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [
-      "D:\\Dependency-Analysis-Extension\\src\\views\\tree\\tokens\\items\\base"
-    ],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "root.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/tokens/root.ts",
-    "exports": {
-      "components": [],
-      "functions": [],
-      "interfaces": [
-        {
-          "name": "Root",
-          "isExported": true,
-          "properties": [
-            {
-              "name": "name",
-              "type": "string",
-              "isRequired": true
-            },
-            {
-              "name": "elements",
-              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element[]",
-              "isRequired": true
-            },
-            {
-              "name": "abstractClassCount",
-              "type": "number",
-              "isRequired": true
-            },
-            {
-              "name": "concreteClassCount",
-              "type": "number",
-              "isRequired": true
-            },
-            {
-              "name": "classCount",
-              "type": "number",
-              "isRequired": true
-            },
-            {
-              "name": "class",
-              "type": "boolean",
-              "isRequired": true
-            },
-            {
-              "name": "package",
-              "type": "boolean",
-              "isRequired": true
-            }
-          ],
-          "usedInFiles": []
+          "name": "props",
+          "required": true
         },
         {
-          "name": "Element",
-          "isExported": true,
-          "properties": [
-            {
-              "name": "packageName",
-              "type": "string",
-              "isRequired": true
-            },
-            {
-              "name": "sourceFile",
-              "type": "string",
-              "isRequired": true
-            },
-            {
-              "name": "signature",
-              "type": "string",
-              "isRequired": true
-            },
-            {
-              "name": "fields",
-              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Field[]",
-              "isRequired": true
-            },
-            {
-              "name": "methods",
-              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Method[]",
-              "isRequired": true
-            },
-            {
-              "name": "outGoingDependencies",
-              "type": "string[]",
-              "isRequired": true
-            },
-            {
-              "name": "incomingDependencies",
-              "type": "string[]",
-              "isRequired": true
-            },
-            {
-              "name": "superClassName",
-              "type": "string[]",
-              "isRequired": true
-            },
-            {
-              "name": "interfaces",
-              "type": "string[]",
-              "isRequired": true
-            },
-            {
-              "name": "interface",
-              "type": "boolean",
-              "isRequired": true
-            },
-            {
-              "name": "elements",
-              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").Element[]",
-              "isRequired": true
-            },
-            {
-              "name": "importedPackages",
-              "type": "import(\"D:/Dependency-Analysis-Extension/src/views/tree/tokens/root\").ImportedPackage[]",
-              "isRequired": true
-            },
-            {
-              "name": "class",
-              "type": "boolean",
-              "isRequired": true
-            },
-            {
-              "name": "final",
-              "type": "boolean",
-              "isRequired": true
-            },
-            {
-              "name": "name",
-              "type": "string",
-              "isRequired": true
-            },
-            {
-              "name": "abstract",
-              "type": "boolean",
-              "isRequired": true
-            },
-            {
-              "name": "package",
-              "type": "boolean",
-              "isRequired": true
-            }
-          ],
-          "usedInFiles": []
-        },
-        {
-          "name": "Method",
-          "isExported": true,
-          "properties": [
-            {
-              "name": "accessModifier",
-              "type": "string",
-              "isRequired": true
-            },
-            {
-              "name": "static",
-              "type": "boolean",
-              "isRequired": true
-            },
-            {
-              "name": "final",
-              "type": "boolean",
-              "isRequired": true
-            },
-            {
-              "name": "abstract",
-              "type": "boolean",
-              "isRequired": true
-            },
-            {
-              "name": "name",
-              "type": "string",
-              "isRequired": true
-            },
-            {
-              "name": "parameters",
-              "type": "string[]",
-              "isRequired": true
-            },
-            {
-              "name": "returnType",
-              "type": "string",
-              "isRequired": true
-            }
-          ],
-          "usedInFiles": []
-        },
-        {
-          "name": "Field",
-          "isExported": true,
-          "properties": [
-            {
-              "name": "name",
-              "type": "string",
-              "isRequired": true
-            },
-            {
-              "name": "type",
-              "type": "string",
-              "isRequired": true
-            },
-            {
-              "name": "static",
-              "type": "boolean",
-              "isRequired": true
-            },
-            {
-              "name": "final",
-              "type": "boolean",
-              "isRequired": true
-            },
-            {
-              "name": "modifier",
-              "type": "string",
-              "isRequired": true
-            }
-          ],
-          "usedInFiles": []
-        },
-        {
-          "name": "ImportedPackage",
-          "isExported": true,
-          "properties": [
-            {
-              "name": "name",
-              "type": "string",
-              "isRequired": true
-            },
-            {
-              "name": "elements",
-              "type": "any[]",
-              "isRequired": true
-            },
-            {
-              "name": "abstractClassCount",
-              "type": "number",
-              "isRequired": true
-            },
-            {
-              "name": "concreteClassCount",
-              "type": "number",
-              "isRequired": true
-            },
-            {
-              "name": "classCount",
-              "type": "number",
-              "isRequired": true
-            },
-            {
-              "name": "class",
-              "type": "boolean",
-              "isRequired": true
-            },
-            {
-              "name": "package",
-              "type": "boolean",
-              "isRequired": true
-            }
-          ],
-          "usedInFiles": []
+          "name": "className",
+          "type": "any",
+          "required": true
         }
       ],
-      "types": [],
-      "classes": [],
-      "variables": []
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
     },
-    "imports": [],
-    "incomingDependencies": [],
-    "outgoingDependencies": [],
-    "usedByComponents": []
-  },
-  {
-    "fileName": "base.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/tokens/tree/base.ts",
-    "exports": {
-      "components": [],
-      "functions": [],
-      "interfaces": [
+    "ResizablePanelGroup": {
+      "name": "ResizablePanelGroup",
+      "filePath": "components/ui/resizable.tsx",
+      "props": [
         {
-          "name": "IBaseToken",
-          "isExported": true,
-          "properties": [
-            {
-              "name": "name",
-              "type": "string",
-              "isRequired": true
-            },
-            {
-              "name": "position",
-              "type": "import(\"vscode\").Range",
-              "isRequired": false
-            },
-            {
-              "name": "contextName",
-              "type": "string",
-              "isRequired": false
-            }
-          ],
-          "usedInFiles": []
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
         }
       ],
-      "types": [],
-      "classes": [],
-      "variables": []
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
     },
-    "imports": [
-      {
-        "name": "Range",
-        "path": "vscode",
-        "namedImports": [
-          "Range"
-        ],
-        "defaultImport": "",
-        "isTypeOnly": false
-      }
-    ],
-    "incomingDependencies": [],
-    "outgoingDependencies": [],
-    "usedByComponents": []
+    "ResizableHandle": {
+      "name": "ResizableHandle",
+      "filePath": "components/ui/resizable.tsx",
+      "props": [
+        {
+          "name": "withHandle",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "Pagination": {
+      "name": "Pagination",
+      "filePath": "components/ui/pagination.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "PaginationLink": {
+      "name": "PaginationLink",
+      "filePath": "components/ui/pagination.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "PaginationLinkProps",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "isActive",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "size",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "PaginationPrevious": {
+      "name": "PaginationPrevious",
+      "filePath": "components/ui/pagination.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": [
+        "PaginationLink"
+      ]
+    },
+    "PaginationNext": {
+      "name": "PaginationNext",
+      "filePath": "components/ui/pagination.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": [
+        "PaginationLink"
+      ]
+    },
+    "PaginationEllipsis": {
+      "name": "PaginationEllipsis",
+      "filePath": "components/ui/pagination.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "MenubarShortcut": {
+      "name": "MenubarShortcut",
+      "filePath": "components/ui/menubar.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "FormField": {
+      "name": "FormField",
+      "filePath": "components/ui/form.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "ControllerProps",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [
+        {
+          "type": "useFormContext",
+          "customHook": true
+        },
+        {
+          "type": "useFormField",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": []
+    },
+    "DropdownMenuShortcut": {
+      "name": "DropdownMenuShortcut",
+      "filePath": "components/ui/dropdown-menu.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "Drawer": {
+      "name": "Drawer",
+      "filePath": "components/ui/drawer.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "shouldScaleBackground",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "DrawerHeader": {
+      "name": "DrawerHeader",
+      "filePath": "components/ui/drawer.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "DrawerFooter": {
+      "name": "DrawerFooter",
+      "filePath": "components/ui/drawer.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "DialogHeader": {
+      "name": "DialogHeader",
+      "filePath": "components/ui/dialog.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "DialogFooter": {
+      "name": "DialogFooter",
+      "filePath": "components/ui/dialog.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "ContextMenuShortcut": {
+      "name": "ContextMenuShortcut",
+      "filePath": "components/ui/context-menu.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "CommandDialog": {
+      "name": "CommandDialog",
+      "filePath": "components/ui/command.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "CommandDialogProps",
+          "required": true
+        },
+        {
+          "name": "children",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "CommandShortcut": {
+      "name": "CommandShortcut",
+      "filePath": "components/ui/command.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "ChartStyle": {
+      "name": "ChartStyle",
+      "filePath": "components/ui/chart.tsx",
+      "props": [
+        {
+          "name": "id",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "config",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [
+        {
+          "type": "useChart",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "ChartStyle"
+      ]
+    },
+    "Calendar": {
+      "name": "Calendar",
+      "filePath": "components/ui/calendar.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "CalendarProps",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "classNames",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "showOutsideDays",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "BreadcrumbSeparator": {
+      "name": "BreadcrumbSeparator",
+      "filePath": "components/ui/breadcrumb.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "children",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "BreadcrumbEllipsis": {
+      "name": "BreadcrumbEllipsis",
+      "filePath": "components/ui/breadcrumb.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "Badge": {
+      "name": "Badge",
+      "filePath": "components/ui/badge.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "BadgeProps",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "variant",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "AlertDialogHeader": {
+      "name": "AlertDialogHeader",
+      "filePath": "components/ui/alert-dialog.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "AlertDialogFooter": {
+      "name": "AlertDialogFooter",
+      "filePath": "components/ui/alert-dialog.tsx",
+      "props": [
+        {
+          "name": "props",
+          "required": true
+        },
+        {
+          "name": "className",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "ResultDetailsModal": {
+      "name": "ResultDetailsModal",
+      "filePath": "components/modals/result-details-modal.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [
+        {
+          "type": "useModal",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "DialogHeader"
+      ]
+    },
+    "RemoveMemberModal": {
+      "name": "RemoveMemberModal",
+      "filePath": "components/modals/remove-member-modal.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [
+        {
+          "type": "useModal",
+          "customHook": true
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "DialogHeader",
+        "DialogFooter"
+      ]
+    },
+    "InviteMemberModal": {
+      "name": "InviteMemberModal",
+      "filePath": "components/modals/invite-member-modal.tsx",
+      "props": [],
+      "state": [
+        {
+          "name": "inviteRole",
+          "type": "undefined"
+        },
+        {
+          "name": "inviteLink",
+          "type": "undefined"
+        },
+        {
+          "name": "inviteValidity",
+          "type": "undefined"
+        },
+        {
+          "name": "inviteMaxUses",
+          "type": "undefined"
+        },
+        {
+          "name": "copied",
+          "type": "boolean",
+          "initialValue": "false"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "initialValue": "false"
+        },
+        {
+          "name": "forceLoading",
+          "type": "boolean",
+          "initialValue": "false"
+        },
+        {
+          "name": "dots",
+          "type": "string",
+          "initialValue": "\"\""
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useModal",
+          "customHook": true
+        },
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        },
+        {
+          "type": "useEffect",
+          "customHook": false,
+          "dependencies": [
+            "existingDepartment",
+            "inviteRole"
+          ]
+        },
+        {
+          "type": "useEffect",
+          "customHook": false,
+          "dependencies": [
+            "loading",
+            "forceLoading"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "DialogHeader",
+        "DialogFooter"
+      ]
+    },
+    "ImagePreviewModal": {
+      "name": "ImagePreviewModal",
+      "filePath": "components/modals/image-preview-modal.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [
+        {
+          "type": "useModal",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "DialogHeader"
+      ]
+    },
+    "EditUserModal": {
+      "name": "EditUserModal",
+      "filePath": "components/modals/edit-user-modal.tsx",
+      "props": [],
+      "state": [
+        {
+          "name": "role",
+          "type": "undefined"
+        },
+        {
+          "name": "department",
+          "type": "undefined"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "initialValue": "false"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useModal",
+          "customHook": true
+        },
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useDepartment",
+          "customHook": true
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        },
+        {
+          "type": "useUsers",
+          "customHook": true
+        },
+        {
+          "type": "useEffect",
+          "customHook": false,
+          "dependencies": [
+            "existingUser"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "DialogHeader",
+        "DialogFooter"
+      ]
+    },
+    "EditProfileModal": {
+      "name": "EditProfileModal",
+      "filePath": "components/modals/edit-profile-modal.tsx",
+      "props": [],
+      "state": [
+        {
+          "name": "firstNameEdit",
+          "type": "undefined"
+        },
+        {
+          "name": "lastNameEdit",
+          "type": "undefined"
+        },
+        {
+          "name": "editValue",
+          "type": "undefined"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "initialValue": "false"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useModal",
+          "customHook": true
+        },
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        },
+        {
+          "type": "useAuth",
+          "customHook": true
+        },
+        {
+          "type": "useEffect",
+          "customHook": false,
+          "dependencies": [
+            "updatingUser"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "DialogHeader",
+        "DialogFooter"
+      ]
+    },
+    "EditDepartmentModal": {
+      "name": "EditDepartmentModal",
+      "filePath": "components/modals/edit-department-modal.tsx",
+      "props": [],
+      "state": [
+        {
+          "name": "name",
+          "type": "any"
+        },
+        {
+          "name": "description",
+          "type": "any"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "initialValue": "false"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useModal",
+          "customHook": true
+        },
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        },
+        {
+          "type": "useRouter",
+          "customHook": true
+        },
+        {
+          "type": "useDepartment",
+          "customHook": true
+        },
+        {
+          "type": "useEffect",
+          "customHook": false,
+          "dependencies": [
+            "existingDepartment"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "DialogHeader",
+        "DialogFooter"
+      ]
+    },
+    "DeleteUserModal": {
+      "name": "DeleteUserModal",
+      "filePath": "components/modals/delete-user-modal.tsx",
+      "props": [],
+      "state": [
+        {
+          "name": "loading",
+          "type": "boolean",
+          "initialValue": "false"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useModal",
+          "customHook": true
+        },
+        {
+          "type": "useRouter",
+          "customHook": true
+        },
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        },
+        {
+          "type": "useUsers",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "DialogHeader",
+        "DialogFooter"
+      ]
+    },
+    "DeleteDepartmentModal": {
+      "name": "DeleteDepartmentModal",
+      "filePath": "components/modals/delete-department-modal.tsx",
+      "props": [],
+      "state": [
+        {
+          "name": "loading",
+          "type": "boolean",
+          "initialValue": "false"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useModal",
+          "customHook": true
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        },
+        {
+          "type": "useRouter",
+          "customHook": true
+        },
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useDepartment",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "DialogHeader",
+        "DialogFooter"
+      ]
+    },
+    "CreateDepartmentModal": {
+      "name": "CreateDepartmentModal",
+      "filePath": "components/modals/create-department-modal.tsx",
+      "props": [],
+      "state": [
+        {
+          "name": "name",
+          "type": "string",
+          "initialValue": "\"\""
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "initialValue": "\"\""
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "initialValue": "false"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useModal",
+          "customHook": true
+        },
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        },
+        {
+          "type": "useRouter",
+          "customHook": true
+        },
+        {
+          "type": "useDepartment",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "DialogHeader",
+        "DialogFooter"
+      ]
+    },
+    "ApplicationRejectionModal": {
+      "name": "ApplicationRejectionModal",
+      "filePath": "components/modals/approval-rejection-modal.tsx",
+      "props": [],
+      "state": [
+        {
+          "name": "rejectionReason",
+          "type": "any"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useModal",
+          "customHook": true
+        },
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        },
+        {
+          "type": "useRouter",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "DialogHeader",
+        "DialogFooter"
+      ]
+    },
+    "ThemeProvider": {
+      "name": "ThemeProvider",
+      "filePath": "components/providers/theme-provider.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "ThemeProviderProps",
+          "required": true
+        },
+        {
+          "name": "children",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "ModalProvider": {
+      "name": "ModalProvider",
+      "filePath": "components/providers/modal-provider.tsx",
+      "props": [],
+      "state": [
+        {
+          "name": "mounted",
+          "type": "boolean",
+          "initialValue": "false"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useEffect",
+          "customHook": false,
+          "dependencies": []
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "ImagePreviewModal",
+        "ResultDetailsModal",
+        "ApplicationRejectionModal",
+        "CreateDepartmentModal",
+        "EditDepartmentModal",
+        "DeleteDepartmentModal",
+        "EditUserModal",
+        "DeleteUserModal",
+        "EditProfileModal",
+        "InviteMemberModal",
+        "RemoveMemberModal"
+      ]
+    },
+    "InvitePageLoading": {
+      "name": "InvitePageLoading",
+      "filePath": "app/invite/[inviteToken]/loading.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "Signup": {
+      "name": "Signup",
+      "filePath": "app/(main)/signup/page.tsx",
+      "props": [],
+      "state": [
+        {
+          "name": "isLoading",
+          "type": "boolean",
+          "initialValue": "false"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useRouter",
+          "customHook": true
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        },
+        {
+          "type": "useForm",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": []
+    },
+    "AuthLayout": {
+      "name": "AuthLayout",
+      "filePath": "app/(main)/(auth)/layout.tsx",
+      "props": [
+        {
+          "name": "children",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [
+        {
+          "name": "isSidebarCollapsed",
+          "type": "boolean",
+          "initialValue": "false"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useAuth",
+          "customHook": true
+        },
+        {
+          "type": "useState",
+          "customHook": false
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "SidebarSkeleton",
+        "Sidebar"
+      ]
+    },
+    "SidebarSkeleton": {
+      "name": "SidebarSkeleton",
+      "filePath": "app/(main)/(auth)/layout.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": [
+        "Skeleton"
+      ]
+    },
+    "Sidebar": {
+      "name": "Sidebar",
+      "filePath": "app/(main)/(auth)/layout.tsx",
+      "props": [
+        {
+          "name": "isSidebarCollapsed",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "toggleSidebar",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [
+        {
+          "name": "isMobileMenuOpen",
+          "type": "boolean",
+          "initialValue": "false"
+        },
+        {
+          "name": "expandedAdminMenu",
+          "type": "boolean",
+          "initialValue": "true"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useRouter",
+          "customHook": true
+        },
+        {
+          "type": "usePathname",
+          "customHook": true
+        },
+        {
+          "type": "useAuth",
+          "customHook": true
+        },
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        },
+        {
+          "type": "useAuthStore",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "ThemeToggle"
+      ]
+    },
+    "renderNavItem": {
+      "name": "renderNavItem",
+      "filePath": "app/(main)/(auth)/layout.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "Login": {
+      "name": "Login",
+      "filePath": "app/(main)/login/page.tsx",
+      "props": [],
+      "state": [
+        {
+          "name": "isLoading",
+          "type": "boolean",
+          "initialValue": "false"
+        },
+        {
+          "name": "error",
+          "type": "string",
+          "initialValue": "\"\""
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useAuth",
+          "customHook": true
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        },
+        {
+          "type": "useForm",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": []
+    },
+    "InviteSuccessCard": {
+      "name": "InviteSuccessCard",
+      "filePath": "app/invite/[inviteToken]/_components/invite-success-card.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "InviteRegistrationForm": {
+      "name": "InviteRegistrationForm",
+      "filePath": "app/invite/[inviteToken]/_components/invite-registration-form.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "InviteRegistrationFormProps",
+          "required": true
+        },
+        {
+          "name": "animationStage",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "inviteToken",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [
+        {
+          "name": "isSubmitting",
+          "type": "boolean",
+          "initialValue": "false"
+        },
+        {
+          "name": "registrationComplete",
+          "type": "boolean",
+          "initialValue": "false"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useForm",
+          "customHook": true
+        },
+        {
+          "type": "useRouter",
+          "customHook": true
+        },
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "InviteSuccessCard"
+      ]
+    },
+    "InvitePageClient": {
+      "name": "InvitePageClient",
+      "filePath": "app/invite/[inviteToken]/_components/invite-page-client.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "InvitePageClientProps",
+          "required": true
+        },
+        {
+          "name": "inviteDetails",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "inviteToken",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [
+        {
+          "name": "animationStage",
+          "type": "number",
+          "initialValue": "0"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useEffect",
+          "customHook": false,
+          "dependencies": [
+            "inviteToken"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "InviteRegistrationForm"
+      ]
+    },
+    "InviteHeader": {
+      "name": "InviteHeader",
+      "filePath": "app/invite/[inviteToken]/_components/invite-header.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "InviteHeaderProps",
+          "required": true
+        },
+        {
+          "name": "animationStage",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "creatorName",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "department",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "role",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": [
+        "Badge"
+      ]
+    },
+    "getRoleIcon": {
+      "name": "getRoleIcon",
+      "filePath": "app/invite/[inviteToken]/_components/invite-header.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "InviteErrorState": {
+      "name": "InviteErrorState",
+      "filePath": "app/invite/[inviteToken]/_components/invite-error-state.tsx",
+      "props": [
+        {
+          "name": "error",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "RegistrationPage": {
+      "name": "RegistrationPage",
+      "filePath": "app/(main)/(auth)/registration/page.tsx",
+      "props": [],
+      "state": [
+        {
+          "name": "departments",
+          "type": "array",
+          "initialValue": "[]"
+        },
+        {
+          "name": "application",
+          "type": "undefined"
+        },
+        {
+          "name": "isReapplying",
+          "type": "boolean",
+          "initialValue": "false"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useRouter",
+          "customHook": true
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        },
+        {
+          "type": "useAuth",
+          "customHook": true
+        },
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useEffect",
+          "customHook": false,
+          "dependencies": [
+            "isLoading",
+            "user",
+            "router"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "Skeleton"
+      ]
+    },
+    "UploadPage": {
+      "name": "UploadPage",
+      "filePath": "app/(main)/(auth)/upload/page.tsx",
+      "props": [],
+      "state": [
+        {
+          "name": "bilFile",
+          "type": "null",
+          "initialValue": "null"
+        },
+        {
+          "name": "hdrFile",
+          "type": "null",
+          "initialValue": "null"
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "initialValue": "\"\""
+        },
+        {
+          "name": "location",
+          "type": "string",
+          "initialValue": "\"\""
+        },
+        {
+          "name": "showSuccess",
+          "type": "boolean",
+          "initialValue": "false"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "initialValue": "\"\""
+        },
+        {
+          "name": "isDragging",
+          "type": "boolean",
+          "initialValue": "false"
+        },
+        {
+          "name": "uploadStatus",
+          "type": "string",
+          "initialValue": "\"\""
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useRouter",
+          "customHook": true
+        },
+        {
+          "type": "useRef",
+          "customHook": false
+        },
+        {
+          "type": "useAuth",
+          "customHook": true
+        },
+        {
+          "type": "useFileUpload",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "Skeleton"
+      ]
+    },
+    "ProfilePage": {
+      "name": "ProfilePage",
+      "filePath": "app/(main)/(auth)/profile/page.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [
+        {
+          "type": "useAuth",
+          "customHook": true
+        },
+        {
+          "type": "useModal",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "Skeleton"
+      ]
+    },
+    "AdminPage": {
+      "name": "AdminPage",
+      "filePath": "app/(main)/(auth)/admin/page.tsx",
+      "props": [],
+      "state": [
+        {
+          "name": "loading",
+          "type": "boolean",
+          "initialValue": "false"
+        },
+        {
+          "name": "approvalStats",
+          "type": "null",
+          "initialValue": "null"
+        },
+        {
+          "name": "approvals",
+          "type": "object",
+          "initialValue": "{}"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useAuth",
+          "customHook": true
+        },
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        },
+        {
+          "type": "useEffect",
+          "customHook": false,
+          "dependencies": [
+            "authLoading"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "Badge",
+        "ApprovalCard"
+      ]
+    },
+    "ApprovalCard": {
+      "name": "ApprovalCard",
+      "filePath": "app/(main)/(auth)/admin/page.tsx",
+      "props": [
+        {
+          "name": "approval",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "showActions",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "DepartmentsPage": {
+      "name": "DepartmentsPage",
+      "filePath": "app/(main)/(auth)/departments/page.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "DashboardPage": {
+      "name": "DashboardPage",
+      "filePath": "app/(main)/(auth)/dashboard/page.tsx",
+      "props": [],
+      "state": [
+        {
+          "name": "compareResults",
+          "type": "array",
+          "initialValue": "[]"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useAuth",
+          "customHook": true
+        },
+        {
+          "type": "useMediaQuery",
+          "customHook": true
+        },
+        {
+          "type": "useAnalysis",
+          "customHook": true
+        },
+        {
+          "type": "useModal",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "DashboardPageSkeleton",
+        "Badge"
+      ]
+    },
+    "DashboardPageSkeleton": {
+      "name": "DashboardPageSkeleton",
+      "filePath": "app/(main)/(auth)/dashboard/page.tsx",
+      "props": [
+        {
+          "name": "itemCount",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": [
+        "Skeleton"
+      ]
+    },
+    "StatusCard": {
+      "name": "StatusCard",
+      "filePath": "app/(main)/(auth)/registration/_components/status-card.tsx",
+      "props": [
+        {
+          "name": "status",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "role",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "appliedAt",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "departmentName",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "rejectionReason",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "processedAt",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "onReapply",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": [
+        "Badge"
+      ]
+    },
+    "RegistrationForm": {
+      "name": "RegistrationForm",
+      "filePath": "app/(main)/(auth)/registration/_components/registration-form.tsx",
+      "props": [
+        {
+          "name": "onSubmit",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "initialRole",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "departments",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "initialDepartment",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [
+        {
+          "name": "role",
+          "type": "initialRole"
+        },
+        {
+          "name": "departmentId",
+          "type": "undefined"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useState",
+          "customHook": false
+        }
+      ],
+      "dependencies": [],
+      "children": []
+    },
+    "UsersPage": {
+      "name": "UsersPage",
+      "filePath": "app/(main)/(auth)/admin/users/page.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [
+        {
+          "type": "useAuth",
+          "customHook": true
+        },
+        {
+          "type": "useModal",
+          "customHook": true
+        },
+        {
+          "type": "usePaginatedUsers",
+          "customHook": true
+        }
+      ],
+      "dependencies": [
+        {
+          "name": "Card",
+          "path": "../../../../../components/ui/card",
+          "isExternal": false
+        },
+        {
+          "name": "CardContent",
+          "path": "../../../../../components/ui/card",
+          "isExternal": false
+        },
+        {
+          "name": "CardDescription",
+          "path": "../../../../../components/ui/card",
+          "isExternal": false
+        },
+        {
+          "name": "CardHeader",
+          "path": "../../../../../components/ui/card",
+          "isExternal": false
+        },
+        {
+          "name": "CardTitle",
+          "path": "../../../../../components/ui/card",
+          "isExternal": false
+        },
+        {
+          "name": "DataTable",
+          "path": "./_components/data-table",
+          "isExternal": false
+        }
+      ],
+      "children": [
+        "Skeleton"
+      ]
+    },
+    "RequestsPage": {
+      "name": "RequestsPage",
+      "filePath": "app/(main)/(auth)/admin/requests/page.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "DepartmentList": {
+      "name": "DepartmentList",
+      "filePath": "app/(main)/(auth)/departments/_components/department-list.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [
+        {
+          "type": "useAuth",
+          "customHook": true
+        },
+        {
+          "type": "useDepartment",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "Skeleton"
+      ]
+    },
+    "DepartmentCard": {
+      "name": "DepartmentCard",
+      "filePath": "app/(main)/(auth)/departments/_components/department-card.tsx",
+      "props": [
+        {
+          "name": "department",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [
+        {
+          "type": "useToast",
+          "customHook": true
+        },
+        {
+          "type": "useModal",
+          "customHook": true
+        },
+        {
+          "type": "useRouter",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "Badge"
+      ]
+    },
+    "CreateDepartmentButton": {
+      "name": "CreateDepartmentButton",
+      "filePath": "app/(main)/(auth)/departments/_components/create-department-button.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [
+        {
+          "type": "useModal",
+          "customHook": true
+        },
+        {
+          "type": "useAuth",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "Skeleton"
+      ]
+    },
+    "EmptyState": {
+      "name": "EmptyState",
+      "filePath": "app/(main)/(auth)/dashboard/_components/empty-state.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "DepartmentDetailPage": {
+      "name": "DepartmentDetailPage",
+      "filePath": "app/(main)/(auth)/departments/[id]/page.tsx",
+      "props": [
+        {
+          "name": "params",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [
+        {
+          "name": "loading",
+          "type": "boolean",
+          "initialValue": "false"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useRouter",
+          "customHook": true
+        },
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useDepartment",
+          "customHook": true
+        },
+        {
+          "type": "useAuth",
+          "customHook": true
+        },
+        {
+          "type": "useMemo",
+          "customHook": false,
+          "dependencies": [
+            "departments"
+          ]
+        },
+        {
+          "type": "useEffect",
+          "customHook": false,
+          "dependencies": []
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "Skeleton"
+      ]
+    },
+    "DataTable": {
+      "name": "DataTable",
+      "filePath": "app/(main)/(auth)/admin/users/_components/data-table.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "DataTableProps",
+          "required": true
+        },
+        {
+          "name": "columns",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "data",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "pagination",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "onPaginationChange",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "totalPages",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [
+        {
+          "type": "useDepartment",
+          "customHook": true
+        },
+        {
+          "type": "useReactTable",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": []
+    },
+    "RequestList": {
+      "name": "RequestList",
+      "filePath": "app/(main)/(auth)/admin/requests/_components/request-list.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "RequestListProps",
+          "required": true
+        },
+        {
+          "name": "requests",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [
+        {
+          "name": "requests",
+          "type": "requestList"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "initialValue": "true"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        },
+        {
+          "type": "useRouter",
+          "customHook": true
+        },
+        {
+          "type": "useAuth",
+          "customHook": true
+        },
+        {
+          "type": "useEffect",
+          "customHook": false,
+          "dependencies": [
+            "requestList"
+          ]
+        },
+        {
+          "type": "useModal",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "RequestsLoading",
+        "Badge"
+      ]
+    },
+    "RequestsLoading": {
+      "name": "RequestsLoading",
+      "filePath": "app/(main)/(auth)/admin/requests/_components/request-list.tsx",
+      "props": [],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": [
+        "Skeleton"
+      ]
+    },
+    "RequestCard": {
+      "name": "RequestCard",
+      "filePath": "app/(main)/(auth)/admin/requests/_components/request-card.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "RequestCardProps",
+          "required": true
+        },
+        {
+          "name": "request",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "appliedAt",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "processedAt",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "onApprove",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "onReject",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": [
+        "Badge"
+      ]
+    },
+    "PieChartComparison": {
+      "name": "PieChartComparison",
+      "filePath": "app/(main)/(auth)/dashboard/_components/comparison/pie-chart-comparison.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "ComparisonElementProps",
+          "required": true
+        },
+        {
+          "name": "result1",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "result2",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "renderCustomizedLabel": {
+      "name": "renderCustomizedLabel",
+      "filePath": "app/(main)/(auth)/dashboard/_components/comparison/pie-chart-comparison.tsx",
+      "props": [
+        {
+          "name": "cx",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "cy",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "midAngle",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "innerRadius",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "outerRadius",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "percent",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "index",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "ComparisonTable": {
+      "name": "ComparisonTable",
+      "filePath": "app/(main)/(auth)/dashboard/_components/comparison/comparison-table.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "ComparisonTableProps",
+          "required": true
+        },
+        {
+          "name": "result1",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "result2",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "ComparisonItem": {
+      "name": "ComparisonItem",
+      "filePath": "app/(main)/(auth)/dashboard/_components/comparison/comparison-item.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "ComparisonItemProps",
+          "required": true
+        },
+        {
+          "name": "type",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "resultData",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": [
+        "ComparisonTable",
+        "PieChartComparison"
+      ]
+    },
+    "BarChartComparison": {
+      "name": "BarChartComparison",
+      "filePath": "app/(main)/(auth)/dashboard/_components/comparison/bar-chart-comparison.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "ComparisonElementProps",
+          "required": true
+        },
+        {
+          "name": "result1",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "result2",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "PaginationControls": {
+      "name": "PaginationControls",
+      "filePath": "app/(main)/(auth)/departments/[id]/_components/pagination-controls.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "PaginationControlProps",
+          "required": true
+        },
+        {
+          "name": "pagination",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "totalElements",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "onPaginationChange",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [
+        {
+          "type": "useAuth",
+          "customHook": true
+        }
+      ],
+      "dependencies": [],
+      "children": []
+    },
+    "MemberList": {
+      "name": "MemberList",
+      "filePath": "app/(main)/(auth)/departments/[id]/_components/member-list.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "MemberListProps",
+          "required": true
+        },
+        {
+          "name": "members",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "onRemove",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "isAdmin",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "isLoading",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": [
+        "Badge"
+      ]
+    },
+    "FilterControls": {
+      "name": "FilterControls",
+      "filePath": "app/(main)/(auth)/departments/[id]/_components/filter-controls.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "FilterControlProps",
+          "required": true
+        },
+        {
+          "name": "searchQuery",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "onQueryChange",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "onFilterChange",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "roleFilter",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    },
+    "DepartmentMembers": {
+      "name": "DepartmentMembers",
+      "filePath": "app/(main)/(auth)/departments/[id]/_components/department-members.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "DepartmentMembersProps",
+          "required": true
+        },
+        {
+          "name": "department",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [
+        {
+          "name": "members",
+          "type": "array",
+          "initialValue": "[]"
+        },
+        {
+          "name": "searchQuery",
+          "type": "string",
+          "initialValue": "\"\""
+        },
+        {
+          "name": "roleFilter",
+          "type": "string",
+          "initialValue": "\"\""
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "initialValue": "false"
+        },
+        {
+          "name": "pagination",
+          "type": "object",
+          "initialValue": "{}"
+        },
+        {
+          "name": "totalElements",
+          "type": "number",
+          "initialValue": "0"
+        }
+      ],
+      "hooks": [
+        {
+          "type": "useState",
+          "customHook": false
+        },
+        {
+          "type": "useAuth",
+          "customHook": true
+        },
+        {
+          "type": "useToast",
+          "customHook": true
+        },
+        {
+          "type": "useModal",
+          "customHook": true
+        },
+        {
+          "type": "useMemo",
+          "customHook": false,
+          "dependencies": []
+        },
+        {
+          "type": "useCallback",
+          "customHook": false,
+          "dependencies": [
+            "memoizedPagination",
+            "searchQuery",
+            "roleFilter"
+          ]
+        },
+        {
+          "type": "useEffect",
+          "customHook": false,
+          "dependencies": [
+            "fetchMembers"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "children": [
+        "FilterControls",
+        "MemberList",
+        "PaginationControls"
+      ]
+    },
+    "DepartmentInfo": {
+      "name": "DepartmentInfo",
+      "filePath": "app/(main)/(auth)/departments/[id]/_components/department-info.tsx",
+      "props": [
+        {
+          "name": "props",
+          "type": "DepartmentInfoProps",
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "createdAt",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "state": [],
+      "hooks": [],
+      "dependencies": [],
+      "children": []
+    }
   },
-  {
-    "fileName": "tree.ts",
-    "filePath": "D:/Dependency-Analysis-Extension/src/views/tree/tokens/tree/tree.ts",
-    "exports": {
-      "components": [],
-      "functions": [],
-      "interfaces": [],
-      "types": [],
-      "classes": [],
-      "variables": []
+  "entryPoints": [
+    "Home",
+    "RootLayout",
+    "MainLayout",
+    "Toaster",
+    "SheetHeader",
+    "SheetFooter",
+    "ResizablePanelGroup",
+    "ResizableHandle",
+    "Pagination",
+    "PaginationPrevious",
+    "PaginationNext",
+    "PaginationEllipsis",
+    "MenubarShortcut",
+    "FormField",
+    "DropdownMenuShortcut",
+    "Drawer",
+    "DrawerHeader",
+    "DrawerFooter",
+    "ContextMenuShortcut",
+    "CommandDialog",
+    "CommandShortcut",
+    "Calendar",
+    "BreadcrumbSeparator",
+    "BreadcrumbEllipsis",
+    "AlertDialogHeader",
+    "AlertDialogFooter",
+    "ThemeProvider",
+    "ModalProvider",
+    "InvitePageLoading",
+    "Signup",
+    "AuthLayout",
+    "renderNavItem",
+    "Login",
+    "InvitePageClient",
+    "InviteHeader",
+    "getRoleIcon",
+    "InviteErrorState",
+    "RegistrationPage",
+    "UploadPage",
+    "ProfilePage",
+    "AdminPage",
+    "DepartmentsPage",
+    "DashboardPage",
+    "StatusCard",
+    "RegistrationForm",
+    "UsersPage",
+    "RequestsPage",
+    "DepartmentList",
+    "DepartmentCard",
+    "CreateDepartmentButton",
+    "EmptyState",
+    "DepartmentDetailPage",
+    "DataTable",
+    "RequestList",
+    "RequestCard",
+    "renderCustomizedLabel",
+    "ComparisonItem",
+    "BarChartComparison",
+    "DepartmentMembers",
+    "DepartmentInfo"
+  ],
+  "relationships": {
+    "parentChild": {
+      "MainLayout": [
+        "AuthProvider"
+      ],
+      "PaginationPrevious": [
+        "PaginationLink"
+      ],
+      "PaginationNext": [
+        "PaginationLink"
+      ],
+      "ChartStyle": [
+        "ChartStyle"
+      ],
+      "ResultDetailsModal": [
+        "DialogHeader"
+      ],
+      "RemoveMemberModal": [
+        "DialogHeader",
+        "DialogFooter"
+      ],
+      "InviteMemberModal": [
+        "DialogHeader",
+        "DialogFooter"
+      ],
+      "ImagePreviewModal": [
+        "DialogHeader"
+      ],
+      "EditUserModal": [
+        "DialogHeader",
+        "DialogFooter"
+      ],
+      "EditProfileModal": [
+        "DialogHeader",
+        "DialogFooter"
+      ],
+      "EditDepartmentModal": [
+        "DialogHeader",
+        "DialogFooter"
+      ],
+      "DeleteUserModal": [
+        "DialogHeader",
+        "DialogFooter"
+      ],
+      "DeleteDepartmentModal": [
+        "DialogHeader",
+        "DialogFooter"
+      ],
+      "CreateDepartmentModal": [
+        "DialogHeader",
+        "DialogFooter"
+      ],
+      "ApplicationRejectionModal": [
+        "DialogHeader",
+        "DialogFooter"
+      ],
+      "ModalProvider": [
+        "ImagePreviewModal",
+        "ResultDetailsModal",
+        "ApplicationRejectionModal",
+        "CreateDepartmentModal",
+        "EditDepartmentModal",
+        "DeleteDepartmentModal",
+        "EditUserModal",
+        "DeleteUserModal",
+        "EditProfileModal",
+        "InviteMemberModal",
+        "RemoveMemberModal"
+      ],
+      "AuthLayout": [
+        "SidebarSkeleton",
+        "Sidebar"
+      ],
+      "SidebarSkeleton": [
+        "Skeleton"
+      ],
+      "Sidebar": [
+        "ThemeToggle"
+      ],
+      "InviteRegistrationForm": [
+        "InviteSuccessCard"
+      ],
+      "InvitePageClient": [
+        "InviteRegistrationForm"
+      ],
+      "InviteHeader": [
+        "Badge"
+      ],
+      "RegistrationPage": [
+        "Skeleton"
+      ],
+      "UploadPage": [
+        "Skeleton"
+      ],
+      "ProfilePage": [
+        "Skeleton"
+      ],
+      "AdminPage": [
+        "Badge",
+        "ApprovalCard"
+      ],
+      "DashboardPage": [
+        "DashboardPageSkeleton",
+        "Badge"
+      ],
+      "DashboardPageSkeleton": [
+        "Skeleton"
+      ],
+      "StatusCard": [
+        "Badge"
+      ],
+      "UsersPage": [
+        "Skeleton"
+      ],
+      "DepartmentList": [
+        "Skeleton"
+      ],
+      "DepartmentCard": [
+        "Badge"
+      ],
+      "CreateDepartmentButton": [
+        "Skeleton"
+      ],
+      "DepartmentDetailPage": [
+        "Skeleton"
+      ],
+      "RequestList": [
+        "RequestsLoading",
+        "Badge"
+      ],
+      "RequestsLoading": [
+        "Skeleton"
+      ],
+      "RequestCard": [
+        "Badge"
+      ],
+      "ComparisonItem": [
+        "ComparisonTable",
+        "PieChartComparison"
+      ],
+      "MemberList": [
+        "Badge"
+      ],
+      "DepartmentMembers": [
+        "FilterControls",
+        "MemberList",
+        "PaginationControls"
+      ]
     },
-    "imports": [],
-    "incomingDependencies": [],
-    "outgoingDependencies": [],
-    "usedByComponents": []
+    "imports": {
+      "UsersPage": [
+        "Card",
+        "CardContent",
+        "CardDescription",
+        "CardHeader",
+        "CardTitle",
+        "DataTable"
+      ]
+    }
+  },
+  "stats": {
+    "totalComponents": 91,
+    "totalFiles": 105,
+    "componentsWithState": 24,
+    "componentsWithHooks": 38,
+    "uiComponentsUsed": 0
   }
-]
+}
